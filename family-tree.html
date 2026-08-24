@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="description" content="The Cook family tree — William Cook of Georgia (~1794) to the newest generation today.">
+<title>The Cook Family — The Tree</title>
+<style>
+  :root{
+    --bg:#ece5d1;--card:#f7f2e3;--card2:#fffdf6;--ink:#242b20;--muted:#6c7360;
+    --line:#c8bd9d;--green:#2f5d43;--green2:#3d7355;--gold:#a97f27;--gold-soft:#e8dab4;
+    --hero:#26402f;--hero-ink:#f2ecd8;--shadow:0 2px 10px rgba(50,45,20,.14);
+  }
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+    --bg:#10140e;--card:#1a1f15;--card2:#20261a;--ink:#e9e3d0;--muted:#9a9c83;
+    --line:#3a3a27;--green:#82c299;--green2:#95cea8;--gold:#d7b25e;--gold-soft:#33301d;
+    --hero:#16211a;--hero-ink:#eee7d2;--shadow:0 2px 12px rgba(0,0,0,.5);}}
+  :root[data-theme="dark"]{
+    --bg:#10140e;--card:#1a1f15;--card2:#20261a;--ink:#e9e3d0;--muted:#9a9c83;
+    --line:#3a3a27;--green:#82c299;--green2:#95cea8;--gold:#d7b25e;--gold-soft:#33301d;
+    --hero:#16211a;--hero-ink:#eee7d2;--shadow:0 2px 12px rgba(0,0,0,.5);}
+  *{box-sizing:border-box}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;line-height:1.5}
+  .lab{font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;text-transform:uppercase;
+    letter-spacing:.22em;font-size:.66rem;font-weight:600}
+  header{background:linear-gradient(180deg,var(--hero),color-mix(in srgb,var(--hero) 80%,#000));
+    color:var(--hero-ink);text-align:center;padding:52px 22px 44px;border-bottom:3px solid var(--gold)}
+  header .lab{color:var(--gold)}
+  header h1{font-family:"Hoefler Text",Baskerville,Georgia,serif;font-size:clamp(2.2rem,6vw,3.4rem);
+    margin:.2em 0 .1em;line-height:1.04}
+  header p{margin:0;font-style:italic;opacity:.94;max-width:560px;margin:0 auto}
+  .hint{display:inline-block;margin-top:18px;font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;
+    font-size:.76rem;letter-spacing:.03em;color:var(--gold);border:1px solid rgba(217,192,120,.4);
+    border-radius:20px;padding:6px 14px}
+  .wrap{max-width:840px;margin:0 auto;padding:30px 20px 60px}
+  .bandlab{text-align:center;color:var(--gold);margin:34px 0 12px}
+  .spine{display:flex;flex-direction:column;align-items:center;gap:0}
+  .link{width:2px;height:20px;background:var(--line)}
+
+  .person{background:var(--card);border:1px solid var(--line);border-radius:13px;width:100%;
+    max-width:440px;box-shadow:var(--shadow);outline:none;transition:border-color .2s,box-shadow .2s}
+  .person:hover,.person:focus,.person:focus-within{border-color:var(--gold);box-shadow:0 4px 18px rgba(50,45,20,.2)}
+  .person:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .person.direct{border-left:4px solid var(--gold)}
+  .phead{padding:12px 18px;display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+  .phead .nm{font-family:"Hoefler Text",Baskerville,Georgia,serif;font-weight:700;font-size:1.1rem}
+  .phead .yr{font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;font-size:.82rem;color:var(--muted);
+    white-space:nowrap;font-variant-numeric:tabular-nums}
+  .more{max-height:0;opacity:0;overflow:hidden;transition:max-height .34s ease,opacity .3s ease}
+  .person:hover .more,.person:focus .more,.person:focus-within .more{max-height:340px;opacity:1}
+  .more-in{padding:0 18px 15px;border-top:1px solid var(--line);margin-top:2px}
+  .more-in dl{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;margin:11px 0 0;font-size:.92rem}
+  .more-in dt{color:var(--gold);font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;font-size:.72rem;
+    text-transform:uppercase;letter-spacing:.08em;padding-top:3px}
+  .more-in dd{margin:0}
+  .more-in .story{margin:10px 0 0;font-style:italic;color:var(--muted);font-size:.92rem}
+  .opencue{font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;font-size:.64rem;color:var(--gold);
+    letter-spacing:.06em;opacity:.7}
+  .person:hover .opencue,.person:focus-within .opencue{opacity:0}
+
+  .chips{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;max-width:780px;margin:2px auto 0}
+  .chip{background:var(--card);border:1px solid var(--line);border-radius:11px;box-shadow:var(--shadow);
+    width:232px;outline:none;transition:border-color .2s}
+  .chip:hover,.chip:focus,.chip:focus-within{border-color:var(--gold)}
+  .chip.direct{border-left:3px solid var(--gold)}
+  .chip .chead{padding:8px 12px}
+  .chip .cn{font-family:"Hoefler Text",Baskerville,Georgia,serif;font-weight:700;font-size:.95rem;line-height:1.15}
+  .chip .cy{font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;font-size:.72rem;color:var(--muted)}
+  .chip .cmore{max-height:0;opacity:0;overflow:hidden;transition:max-height .3s,opacity .25s}
+  .chip:hover .cmore,.chip:focus .cmore,.chip:focus-within .cmore{max-height:220px;opacity:1}
+  .chip .cmore-in{padding:0 12px 11px;border-top:1px solid var(--line);font-size:.84rem;color:var(--muted)}
+  .chip .cmore-in .s{font-style:italic;margin-top:6px;display:block}
+  .chip .kids{margin:6px 0 0;padding-left:16px}
+  .chip .kids li{margin:1px 0;font-size:.82rem;color:var(--ink)}
+
+  footer{background:var(--hero);color:var(--hero-ink);text-align:center;padding:34px 22px;border-top:3px solid var(--gold)}
+  footer .lab{color:var(--gold)}
+</style>
+</head>
+<body>
+<header>
+  <div class="lab">The Cook Family · Georgia · Carolina · Arkansas</div>
+  <h1>The Family Tree</h1>
+  <p>Every Cook, named — from William of Georgia (~1794) to the newest of us today.</p>
+  <div class="hint">✦ Hover any name to open their story — tap on a phone</div>
+</header>
+
+<div class="wrap">
+
+  <div class="bandlab lab">The Direct Line</div>
+  <div class="spine">
+    <div class="person direct" tabindex="0"><div class="phead"><span class="nm">William Cook</span><span class="yr">~1794 – 1851 <span class="opencue">▾</span></span></div>
+      <div class="more"><div class="more-in"><dl><dt>Born</dt><dd>about 1794, Georgia</dd><dt>Died</dt><dd>20 June 1851, Anderson District, S.C.</dd><dt>Married</dt><dd>Sarah (maiden name unknown)</dd></dl><p class="story">The earliest proven Cook. Over 600 acres on Little Generostee Creek. Six sons and four daughters.</p></div></div></div>
+    <div class="link"></div>
+    <div class="person direct" tabindex="0"><div class="phead"><span class="nm">Thomas Alexander Cook</span><span class="yr">1824 – 1854 <span class="opencue">▾</span></span></div>
+      <div class="more"><div class="more-in"><dl><dt>Married</dt><dd>Matilda Mouchet (of the ~1740 Mouchet line)</dd></dl><p class="story">Died at about thirty — but his son John Wesley carried the family a thousand miles west.</p></div></div></div>
+    <div class="link"></div>
+    <div class="person direct" tabindex="0"><div class="phead"><span class="nm">John Wesley Cook</span><span class="yr">1844 – 1931 <span class="opencue">▾</span></span></div>
+      <div class="more"><div class="more-in"><dl><dt>Served</dt><dd>Confederate Army — 24th S.C. &amp; Hampton's Legion, under Robert E. Lee</dd><dt>Home</dt><dd>Homesteaded Wickes, Arkansas, 1881</dd></dl><p class="story">Marched with Lee's army nearly to Appomattox; walked home in 1865 so worn his mother thought him dead. Cut sprouts all day before the night he died, at 87.</p></div></div></div>
+    <div class="link"></div>
+    <div class="person direct" tabindex="0"><div class="phead"><span class="nm">Benjamin Franklin Cook</span><span class="yr">1893 – 1962 <span class="opencue">▾</span></span></div>
+      <div class="more"><div class="more-in"><dl><dt>Married</dt><dd>Laura Elizabeth Oglesby (1896–1939)</dd><dt>Children</dt><dd>Nine</dd></dl><p class="story">Lived his whole life on the land his father settled.</p></div></div></div>
+    <div class="link"></div>
+    <div class="person direct" tabindex="0"><div class="phead"><span class="nm">Lewis Elvoy Cook</span><span class="yr">1916 – 1999 <span class="opencue">▾</span></span></div>
+      <div class="more"><div class="more-in"><dl><dt>Married</dt><dd>Elizabeth Susan Brock (1925–1951)</dd></dl><p class="story">The fifth generation. (Elizabeth's Brock line reaches back to 1734 Virginia.)</p></div></div></div>
+    <div class="link"></div>
+    <div class="person direct" tabindex="0"><div class="phead"><span class="nm">Elbert Lewis Cook</span><span class="yr">1941 – 2026 <span class="opencue">▾</span></span></div>
+      <div class="more"><div class="more-in"><dl><dt>Served</dt><dd>United States Air Force</dd><dt>Married</dt><dd>Ellen Young</dd></dl><p class="story">He gathered this family's history over years of letters and census pages, meaning one day to make it a book. This tree is that promise, kept. <em>“Knowledge is power.”</em></p></div></div></div>
+    <div class="link"></div>
+    <div class="person direct" tabindex="0"><div class="phead"><span class="nm">Christopher &ldquo;Topher&rdquo; Cook</span><span class="yr">b. 1973 <span class="opencue">▾</span></span></div>
+      <div class="more"><div class="more-in"><dl><dt>Born</dt><dd>1973, De Queen, Arkansas</dd><dt>Family</dt><dd>Three daughters; eight grandchildren</dd></dl><p class="story">The seventh generation — who finished his father's work, so none of these names would be forgotten.</p></div></div></div>
+  </div>
+
+  <div class="bandlab lab">The Newest Generation — the last of the Cooks</div>
+  <div class="chips">
+    <div class="chip direct" tabindex="0"><div class="chead"><div class="cn">Taryn Cook</div><div class="cy">b. 1996 · Topher's daughter</div></div>
+      <div class="cmore"><div class="cmore-in">Her children:<ul class="kids"><li>James Levi Adam Brown (2016)</li><li>Shayden Ella Ruth Brown (2019)</li><li>Charlotte Avery Marie Brown (2022)</li></ul></div></div></div>
+    <div class="chip direct" tabindex="0"><div class="chead"><div class="cn">Kelsey Cook</div><div class="cy">b. 1999 · Topher's daughter</div></div>
+      <div class="cmore"><div class="cmore-in">Her children:<ul class="kids"><li>ZeaLynn Rhyt Cook (2023)</li><li>Brentley Michael Vaughn (2026)</li></ul></div></div></div>
+    <div class="chip direct" tabindex="0"><div class="chead"><div class="cn">McKayla Cook Tillery</div><div class="cy">b. 2002 · Topher's daughter</div></div>
+      <div class="cmore"><div class="cmore-in">m. Nick Tillery. Her children:<ul class="kids"><li>Ezra Shane Tillery (2023)</li><li>Kason Elijah Matthew Tillery (2025)</li><li>a daughter on the way</li></ul></div></div></div>
+  </div>
+
+  <div class="bandlab lab">William &amp; Sarah's Eleven Children</div>
+  <div class="chips">
+    <div class="chip direct" tabindex="0"><div class="chead"><div class="cn">Thomas Alexander Cook</div><div class="cy">1824–1854 · our line</div></div><div class="cmore"><div class="cmore-in">m. Matilda Mouchet.<span class="s">Father of John Wesley Cook.</span></div></div></div>
+    <div class="chip" tabindex="0"><div class="chead"><div class="cn">Joseph W. Cook</div><div class="cy">d. 1848, Mexico</div></div><div class="cmore"><div class="cmore-in">Volunteered for the Mexican War; died at Perote Castle, 1848.<span class="s">The son lost far from home.</span></div></div></div>
+    <div class="chip" tabindex="0"><div class="chead"><div class="cn">Samuel Cook</div><div class="cy">b. ~1822</div></div><div class="cmore"><div class="cmore-in">A son of William.<span class="s">Left South Carolina after the 1850s.</span></div></div></div>
+    <div class="chip" tabindex="0"><div class="chead"><div class="cn">Moses J. Cook</div><div class="cy">a son of William</div></div><div class="cmore"><div class="cmore-in">Named an heir in the 1860 estate.<span class="s">Scattered west; descendants unmapped.</span></div></div></div>
+    <div class="chip" tabindex="0"><div class="chead"><div class="cn">William L. Cook</div><div class="cy">b. ~1836</div></div><div class="cmore"><div class="cmore-in">A minor at his father's death; petitioner in the 1860 settlement.</div></div></div>
+    <div class="chip" tabindex="0"><div class="chead"><div class="cn">Dr. John Taliaferro Cook</div><div class="cy">1842–1924</div></div><div class="cmore"><div class="cmore-in">A physician; m. Lucille Frances Wiles.<span class="s">Nine children; moved to Hart Co., Georgia.</span></div></div></div>
+    <div class="chip" tabindex="0"><div class="chead"><div class="cn">Sarah Elizabeth Cook</div><div class="cy">m. John C. Haynie</div></div><div class="cmore"><div class="cmore-in">Her husband administered William's estate.<span class="s">Five Haynie children.</span></div></div></div>
+    <div class="chip" tabindex="0"><div class="chead"><div class="cn">Nancy Cook</div><div class="cy">m. William Roach</div></div><div class="cmore"><div class="cmore-in">Left Anderson County after the 1850s.</div></div></div>
+    <div class="chip" tabindex="0"><div class="chead"><div class="cn">Mary Cook</div><div class="cy">m. Richard P. Verner</div></div><div class="cmore"><div class="cmore-in">Left Anderson County after the 1850s.</div></div></div>
+    <div class="chip" tabindex="0"><div class="chead"><div class="cn">Martha F. Cook</div><div class="cy">m. William A. McCallister</div></div><div class="cmore"><div class="cmore-in">Left Anderson County after the 1850s.</div></div></div>
+    <div class="chip" tabindex="0"><div class="chead"><div class="cn">Lucinda Cook</div><div class="cy">~1834 – 1857</div></div><div class="cmore"><div class="cmore-in">A daughter who died young, before the estate was settled.</div></div></div>
+  </div>
+
+  <div class="bandlab lab">Benjamin Franklin's Nine — the Arkansas Cooks</div>
+  <div class="chips">
+    <div class="chip direct" tabindex="0"><div class="chead"><div class="cn">Lewis Elvoy Cook</div><div class="cy">1916–1999 · our line</div></div><div class="cmore"><div class="cmore-in">m. Elizabeth Susan Brock.<span class="s">Father of Elbert.</span></div></div></div>
+    <div class="chip" tabindex="0"><div class="chead"><div class="cn">Pearl Cook</div><div class="cy">1919–1929</div></div><div class="cmore"><div class="cmore-in">Died a child. Named, and not forgotten.</div></div></div>
+    <div class="chip" tabindex="0"><div class="chead"><div class="cn">Grace E. Cook</div><div class="cy">1921–1921</div></div><div class="cmore"><div class="cmore-in">An infant. Named, and not forgotten.</div></div></div>
+    <div class="chip" tabindex="0"><div class="chead"><div class="cn">Martha Ellen Cook</div><div class="cy">1923–2008</div></div><div class="cmore"><div class="cmore-in">m. Marvin Andrew Wilcher.<span class="s">Daughters: Louise, Lola Shirlene, Wathenia, Anita.</span></div></div></div>
+    <div class="chip" tabindex="0"><div class="chead"><div class="cn">Grady Cook</div><div class="cy">1926–2005</div></div><div class="cmore"><div class="cmore-in">m. Gladys Marie Pitchford.<span class="s">Father of Frances “Fran” (Cook) Henson.</span></div></div></div>
+    <div class="chip" tabindex="0"><div class="chead"><div class="cn">Roy Cook</div><div class="cy">1928–1985</div></div><div class="cmore"><div class="cmore-in">m. Betty Mae Blanton.</div></div></div>
+    <div class="chip" tabindex="0"><div class="chead"><div class="cn">Zella Cook</div><div class="cy">1931–1975</div></div><div class="cmore"><div class="cmore-in">A daughter of Benjamin Franklin.</div></div></div>
+    <div class="chip" tabindex="0"><div class="chead"><div class="cn">Albert Cook</div><div class="cy">1937–1937</div></div><div class="cmore"><div class="cmore-in">An infant. Named, and not forgotten.</div></div></div>
+    <div class="chip" tabindex="0"><div class="chead"><div class="cn">Idabell Mae Cook</div><div class="cy">1939–2019</div></div><div class="cmore"><div class="cmore-in">m. Elbert Arthur Dedrick.</div></div></div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="lab">The Cook Family · in memory of Elbert Lewis Cook (1941–2026)</div>
+  <p style="max-width:560px;margin:12px auto 0;font-style:italic;opacity:.9">Every name traced from a real record — from the first Cook of Georgia to the newest child of all.</p>
+</footer>
+</body>
+</html>
