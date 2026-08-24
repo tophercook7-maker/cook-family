@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="description" content="The Cook Family — an eight-generation genealogy from William Cook of Georgia (~1794) to today, in memory of Elbert Lewis Cook.">
+<title>The Cook Family — A Genealogy</title>
+<style>
+  :root{
+    --bg:#ece5d1; --panel:#f5f0e0; --panel-2:#efe8d4; --ink:#242b20; --muted:#6c7360;
+    --line:#c8bd9d; --line-soft:#dcd3b8; --green:#2f5d43; --green-2:#3d7355; --green-deep:#244a37;
+    --gold:#a97f27; --gold-2:#c39a3f; --gold-soft:#e7d9b2; --spine-bg:#e7ecde; --shadow:0 1px 3px rgba(40,40,20,.13);
+    --hero-ink:#f2ecd8; --hero-bg:#26402f;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --bg:#10140e; --panel:#191e15; --panel-2:#1e2318; --ink:#e9e3d0; --muted:#9b9c83;
+      --line:#3a3a27; --line-soft:#2c2c1d; --green:#82c299; --green-2:#95cea8; --green-deep:#1d2a20;
+      --gold:#d7b25e; --gold-2:#e4c579; --gold-soft:#33301d; --spine-bg:#1c2419; --shadow:0 1px 4px rgba(0,0,0,.45);
+      --hero-ink:#eee7d2; --hero-bg:#16211a;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#10140e; --panel:#191e15; --panel-2:#1e2318; --ink:#e9e3d0; --muted:#9b9c83;
+    --line:#3a3a27; --line-soft:#2c2c1d; --green:#82c299; --green-2:#95cea8; --green-deep:#1d2a20;
+    --gold:#d7b25e; --gold-2:#e4c579; --gold-soft:#33301d; --spine-bg:#1c2419; --shadow:0 1px 4px rgba(0,0,0,.45);
+    --hero-ink:#eee7d2; --hero-bg:#16211a;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:Georgia,"Iowan Old Style","Times New Roman",serif;
+    font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased;
+    font-variant-numeric:tabular-nums}
+  .disp{font-family:"Hoefler Text","Baskerville","Palatino Linotype",Georgia,serif}
+  .lab{font-family:"Avenir Next","Gill Sans MT","Gill Sans",system-ui,sans-serif;
+    text-transform:uppercase;letter-spacing:.22em;font-size:.68rem;font-weight:600}
+  a{color:var(--green-2)}
+  .wrap{max-width:820px;margin:0 auto;padding:0 22px}
+
+  /* NAV */
+  nav.top{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line-soft)}
+  nav.top .row{max-width:1040px;margin:0 auto;display:flex;align-items:center;gap:6px;
+    padding:9px 18px;overflow-x:auto}
+  nav.top .brand{font-family:"Hoefler Text",Baskerville,Georgia,serif;font-weight:700;
+    color:var(--green);white-space:nowrap;margin-right:14px;font-size:1.02rem}
+  nav.top a{color:var(--muted);text-decoration:none;white-space:nowrap;padding:4px 10px;border-radius:6px;
+    font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;font-size:.8rem;letter-spacing:.02em}
+  nav.top a:hover{color:var(--green);background:var(--panel-2)}
+
+  /* HERO */
+  header.hero{background:
+      radial-gradient(120% 90% at 50% -10%, rgba(180,150,70,.14), transparent 60%),
+      linear-gradient(180deg,var(--hero-bg),color-mix(in srgb,var(--hero-bg) 82%, #000));
+    color:var(--hero-ink);text-align:center;padding:78px 22px 66px;border-bottom:3px solid var(--gold)}
+  header.hero .kick{color:var(--gold-2);letter-spacing:.34em}
+  header.hero h1{font-family:"Hoefler Text",Baskerville,Georgia,serif;font-weight:700;
+    font-size:clamp(2.6rem,7vw,4.6rem);margin:.28em 0 .12em;line-height:1.02;text-wrap:balance}
+  header.hero .sub{font-style:italic;font-size:1.16rem;opacity:.94;max-width:640px;margin:.2em auto 0;text-wrap:balance}
+  header.hero .span{margin-top:26px;display:inline-flex;gap:26px;flex-wrap:wrap;justify-content:center;
+    border-top:1px solid rgba(240,225,180,.28);border-bottom:1px solid rgba(240,225,180,.28);padding:12px 4px}
+  header.hero .span b{display:block;font-size:1.5rem;color:var(--gold-2);font-family:"Hoefler Text",Baskerville,serif}
+  header.hero .span span{font-size:.72rem}
+
+  section{padding:56px 0}
+  section:nth-of-type(even){background:var(--panel)}
+  .eyebrow{color:var(--gold);margin-bottom:10px}
+  h2.disp{font-size:clamp(1.7rem,4vw,2.3rem);color:var(--green);margin:.1em 0 .5em;line-height:1.12;text-wrap:balance}
+  h3.disp{font-size:1.28rem;color:var(--green-2);margin:1.6em 0 .3em}
+  p{margin:0 0 1.05em}
+  .lead{font-size:1.2rem;line-height:1.55}
+  .rule{width:60px;height:3px;background:var(--gold);border:0;margin:0 0 26px}
+  blockquote{margin:1.4em 0;padding:2px 0 2px 22px;border-left:3px solid var(--gold);
+    font-style:italic;color:var(--ink)}
+
+  /* SPINE (direct line) */
+  .spine{display:flex;flex-direction:column;align-items:center;gap:0;margin-top:8px}
+  .node{background:var(--panel-2);border:1px solid var(--line);border-radius:12px;padding:12px 20px;
+    text-align:center;max-width:460px;width:100%;box-shadow:var(--shadow)}
+  .node.direct{border:2px solid var(--gold);background:color-mix(in srgb,var(--gold-soft) 40%, var(--panel-2))}
+  .node .nm{font-family:"Hoefler Text",Baskerville,Georgia,serif;font-weight:700;font-size:1.08rem}
+  .node .dt{font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;font-size:.82rem;color:var(--muted);margin-top:2px}
+  .link-v{width:2px;height:22px;background:var(--line)}
+
+  /* TREE (collapsible descendancy) */
+  .tree{font-size:.98rem;margin-top:10px}
+  .tree details{margin:0}
+  .tree summary{list-style:none;cursor:pointer;padding:7px 12px;border-radius:9px;
+    display:flex;align-items:baseline;gap:9px;border:1px solid transparent}
+  .tree summary::-webkit-details-marker{display:none}
+  .tree summary:hover{background:var(--panel-2)}
+  .tree summary:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .tree .tw{font-family:"Hoefler Text",Baskerville,Georgia,serif;font-weight:700;color:var(--ink)}
+  .tree .td{font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;font-size:.76rem;color:var(--muted)}
+  .tree .sp{color:var(--green-2);font-size:.82rem}
+  .tree .caret{color:var(--gold);font-size:.8rem;width:12px;flex:none;transition:transform .18s}
+  @media (prefers-reduced-motion:reduce){.tree .caret{transition:none}}
+  .tree details[open]>summary>.caret{transform:rotate(90deg)}
+  .tree .leaf .caret{visibility:hidden}
+  .tree ul{list-style:none;margin:0;padding:0 0 0 20px;border-left:1px solid var(--line-soft);
+    margin-left:16px}
+  .tree li{margin:1px 0}
+  .badge{display:inline-block;font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;
+    font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;padding:1px 7px;border-radius:20px;
+    vertical-align:middle;margin-left:6px}
+  .badge.direct{background:var(--gold-soft);color:var(--gold)}
+  .badge.gone{border:1px solid var(--line);color:var(--muted)}
+  .badge.living{border:1px dashed var(--line);color:var(--muted)}
+  .treebar{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin:6px 0 4px}
+  .treebar button{font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;font-size:.74rem;
+    background:var(--panel-2);border:1px solid var(--line);color:var(--green-2);padding:5px 12px;
+    border-radius:20px;cursor:pointer}
+  .treebar button:hover{border-color:var(--gold);color:var(--gold)}
+
+  /* VISUAL CHART */
+  .chart-wrap{position:relative;margin-top:16px;border:1px solid var(--line);border-radius:14px;
+    overflow:hidden;background:
+      radial-gradient(120% 120% at 0% 0%, var(--panel-2), var(--panel));
+    height:min(72vh,640px);box-shadow:var(--shadow) inset}
+  .chart-wrap svg#famchart{width:100%;height:100%;display:block;touch-action:none;cursor:grab}
+  .chart-wrap svg#famchart.grabbing{cursor:grabbing}
+  .chart-wrap .ctrls{position:absolute;top:10px;right:10px;display:flex;gap:6px;flex-wrap:wrap;
+    justify-content:flex-end;max-width:70%;z-index:3}
+  .chart-wrap .ctrls button{font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;font-size:.73rem;
+    background:var(--bg);border:1px solid var(--line);color:var(--green-2);padding:5px 11px;
+    border-radius:8px;cursor:pointer;box-shadow:var(--shadow)}
+  .chart-wrap .ctrls button:hover{border-color:var(--gold);color:var(--gold)}
+  .chart-hint{font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;font-size:.75rem;
+    color:var(--muted);margin-top:9px}
+  #famchart .link{fill:none;stroke:var(--line);stroke-width:1.4}
+  #famchart .link.direct{stroke:var(--gold);stroke-width:2.4}
+  #famchart .box{fill:var(--panel-2);stroke:var(--line);stroke-width:1.2}
+  #famchart .box.has{cursor:pointer}
+  #famchart .box.direct{fill:var(--gold-soft);stroke:var(--gold);stroke-width:2}
+  #famchart .box.living{stroke-dasharray:5 3}
+  #famchart .box.gone{opacity:.72}
+  #famchart .nm{font-weight:700;font-size:12.5px;fill:var(--ink);font-family:Georgia,serif}
+  #famchart .dt{font-size:10px;fill:var(--muted);font-family:"Avenir Next","Gill Sans",system-ui,sans-serif}
+  #famchart .tog{fill:var(--green)}
+  #famchart .tog-t{fill:var(--bg);font-size:13px;font-weight:700;font-family:system-ui,sans-serif}
+  .outline-details{margin-top:22px}
+  .outline-details>summary{cursor:pointer;font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;
+    font-size:.82rem;letter-spacing:.02em;color:var(--green-2);padding:6px 0}
+  .outline-details>summary:hover{color:var(--gold)}
+
+  /* GENERATION CARDS */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px;margin-top:6px}
+  .card{background:var(--panel-2);border:1px solid var(--line);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow)}
+  .card.g{border-left:3px solid var(--gold)}
+  .card h4{font-family:"Hoefler Text",Baskerville,Georgia,serif;margin:0 0 3px;font-size:1.05rem;color:var(--ink)}
+  .card .dt{font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;font-size:.78rem;color:var(--muted)}
+  .card ul{margin:8px 0 0;padding-left:18px;font-size:.9rem}
+  .card li{margin:2px 0}
+
+  .note{background:var(--panel-2);border:1px solid var(--line);border-left:3px solid var(--gold);
+    border-radius:10px;padding:14px 18px;font-size:.95rem;color:var(--ink)}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:640px){.cols{grid-template-columns:1fr}}
+
+  footer{background:var(--hero-bg);color:var(--hero-ink);text-align:center;padding:44px 22px;border-top:3px solid var(--gold)}
+  footer .lab{color:var(--gold-2)}
+  footer a{color:var(--gold-2)}
+  .mem{max-width:560px;margin:0 auto}
+</style>
+</head>
+<body>
+<nav class="top"><div class="row">
+  <span class="brand">The Cook Family</span>
+  <a href="#discovery">The Discovery</a>
+  <a href="#line">The Direct Line</a>
+  <a href="#tree">Family Tree</a>
+  <a href="#arkansas">The Arkansas Cooks</a>
+  <a href="#roots">Deeper Roots</a>
+  <a href="#walls">The Walls</a>
+  <a href="#add">Add Your Branch</a>
+  <a href="#memory">In Memory</a>
+</div></nav>
+
+<header class="hero">
+  <div class="lab kick">A Family History &middot; Georgia &middot; Carolina &middot; Arkansas</div>
+  <h1 class="disp">The Cook Family</h1>
+  <p class="sub">From William Cook of Georgia, born about 1794, down eight generations to the children of today — and the story of how, in 2026, the record finally opened.</p>
+  <div class="span">
+    <div><b>~1794</b><span class="lab">first proven Cook</span></div>
+    <div><b>8</b><span class="lab">generations</span></div>
+    <div><b>~1740</b><span class="lab">deepest root</span></div>
+  </div>
+</header>
+
+<!-- DISCOVERY -->
+<section id="discovery"><div class="wrap">
+  <div class="lab eyebrow">The Discovery</div>
+  <h2 class="disp">A wall that stood for a lifetime — opened in a single season</h2>
+  <hr class="rule">
+  <p class="lead">Elbert Lewis Cook spent years gathering this family's story — letters, census pages, cemetery lists, a soldier's own handwriting. He meant to make a book of it. He never quite finished; he passed on the 10th of May, 2026.</p>
+  <p>When his research was set in order, something had changed that he never had in his lifetime: whole libraries of old Carolina land, court, and census records had come online — searchable, at last, word by word. Going back into them, the people he had chased for so long finally answered.</p>
+  <p>The breakthrough was a single document: the <strong>1857–1860 court settlement of William Cook's estate</strong>, which divided his land into eleven equal shares and named every heir. Paired with the 1850 census, it did what nothing else could — it let us call the roll of William's children with certainty, correct the dates the old accounts had wrong, and follow the line forward, name by name, to the present day.</p>
+  <div class="note">One rule was kept the whole way, the rule that was his: <strong>nothing is set down here that was not read in a real record.</strong> No ancestor was ever invented. Where a name comes only from living family memory, or from a shared tree still to be verified, it is marked as such.</div>
+</div></section>
+
+<!-- DIRECT LINE -->
+<section id="line"><div class="wrap">
+  <div class="lab eyebrow">Father to Son</div>
+  <h2 class="disp">The Direct Line — Seven Generations</h2>
+  <hr class="rule">
+  <p>The spine of the family, exactly as Elbert traced it and the records now confirm — from a man born when George Washington still lived, down to today.</p>
+  <div class="spine">
+    <div class="node direct"><div class="nm">William Cook</div><div class="dt">~1794, Georgia &nbsp;·&nbsp; d. 20 June 1851, Anderson District, S.C. &nbsp;·&nbsp; m. Sarah</div></div>
+    <div class="link-v"></div>
+    <div class="node direct"><div class="nm">Thomas Alexander Cook</div><div class="dt">1824 – 1854 &nbsp;·&nbsp; m. Matilda Mouchet</div></div>
+    <div class="link-v"></div>
+    <div class="node direct"><div class="nm">John Wesley Cook</div><div class="dt">1844 – 1931 &nbsp;·&nbsp; Confederate soldier; homesteaded Wickes, Arkansas, 1881</div></div>
+    <div class="link-v"></div>
+    <div class="node direct"><div class="nm">Benjamin Franklin Cook</div><div class="dt">1893 – 1962 &nbsp;·&nbsp; m. Laura Elizabeth Oglesby</div></div>
+    <div class="link-v"></div>
+    <div class="node direct"><div class="nm">Lewis Elvoy Cook</div><div class="dt">1916 – 1999 &nbsp;·&nbsp; m. Elizabeth Brock</div></div>
+    <div class="link-v"></div>
+    <div class="node direct"><div class="nm">Elbert Lewis Cook</div><div class="dt">1941 – 2026 &nbsp;·&nbsp; gathered this family history</div></div>
+    <div class="link-v"></div>
+    <div class="node direct"><div class="nm">Christopher Brent &ldquo;Topher&rdquo; Cook</div><div class="dt">b. 1973, De Queen, Arkansas</div></div>
+  </div>
+</div></section>
+
+<!-- FULL TREE -->
+<section id="tree"><div class="wrap">
+  <div class="lab eyebrow">The Whole Family</div>
+  <h2 class="disp">The Cook Family Tree</h2>
+  <hr class="rule">
+  <p>Every branch we've been able to document, descending from William Cook — <strong>drag to move, scroll or pinch to zoom,</strong> and click any box with a <strong>–&thinsp;/&thinsp;+</strong> to open or close its line. The <span style="color:var(--gold)">gold</span> path is the direct line to today; dashed boxes are <em>living</em> branches (kept private); faded boxes are families the record loses after the 1850s.</p>
+  <div class="chart-wrap">
+    <div class="ctrls">
+      <button data-act="fit" type="button">Fit all</button>
+      <button data-act="line" type="button">Direct line</button>
+      <button data-act="expand" type="button">Expand all</button>
+      <button data-act="zin" type="button" aria-label="Zoom in">＋</button>
+      <button data-act="zout" type="button" aria-label="Zoom out">－</button>
+    </div>
+    <svg id="famchart" role="img" aria-label="Interactive Cook family tree chart"><g id="viewport"></g></svg>
+  </div>
+  <p class="chart-hint">Tip — click a person to collapse or open their branch; “Fit all” shows the whole tree; “Direct line” focuses the spine down to Topher.</p>
+
+  <details class="outline-details">
+    <summary>Prefer a plain written list? Open the full text outline ▾</summary>
+    <div class="treebar">
+      <button id="expandAll" type="button">Expand all</button>
+      <button id="collapseAll" type="button">Collapse to top</button>
+    </div>
+    <div class="tree" id="outline">
+    <details open>
+      <summary><span class="caret">▶</span><span><span class="tw">William Cook</span> <span class="td">~1794 Georgia – 1851</span> <span class="sp">&amp; Sarah (—)</span> <span class="badge direct">line</span></span></summary>
+      <ul>
+        <li><details open>
+          <summary><span class="caret">▶</span><span><span class="tw">Thomas Alexander Cook</span> <span class="td">1824–1854</span> <span class="sp">&amp; Matilda Mouchet</span> <span class="badge direct">line</span></span></summary>
+          <ul>
+            <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">Mary J. Cook</span> <span class="td">b. ~1843</span></span></summary></li>
+            <li><details open>
+              <summary><span class="caret">▶</span><span><span class="tw">John Wesley Cook</span> <span class="td">1844–1931</span> <span class="sp">&amp; (1) Emma Bryan · (2) Virginia E. May</span> <span class="badge direct">line</span></span></summary>
+              <ul>
+                <li class="leaf"><summary><span class="caret">▶</span><span><span class="td" style="color:var(--muted)">by Emma C. Bryan (1849–1928):</span></span></summary></li>
+                <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">John Lewis Cook</span> <span class="td">1869–1934</span></span></summary></li>
+                <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">James W. Cook</span> <span class="td">1873–1947</span></span></summary></li>
+                <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">David Lucius Cook</span> <span class="td">1877–1957</span></span></summary></li>
+                <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">Amanda Cornelia Cook</span> <span class="td">1880–1881</span></span></summary></li>
+                <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">Jessie Ligon Cook</span> <span class="td">b. 1882</span></span></summary></li>
+                <li class="leaf"><summary><span class="caret">▶</span><span><span class="td" style="color:var(--muted)">by Virginia Elizabeth May (1867–1952):</span></span></summary></li>
+                <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">William Hampton Cook</span> <span class="td">1889–1921</span></span></summary></li>
+                <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">George T. Cook</span> <span class="td">1889–1917</span></span></summary></li>
+                <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">Joe Cook</span> <span class="td">1890–1966</span></span></summary></li>
+                <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">Allie (Cook) Lusty</span> <span class="td">1892–1935</span></span></summary></li>
+                <li><details>
+                  <summary><span class="caret">▶</span><span><span class="tw">Benjamin Franklin Cook</span> <span class="td">1893–1962</span> <span class="sp">&amp; Laura E. Oglesby</span> <span class="badge direct">line</span></span></summary>
+                  <ul>
+                    <li><details>
+                      <summary><span class="caret">▶</span><span><span class="tw">Lewis Elvoy Cook</span> <span class="td">1916–1999</span> <span class="sp">&amp; Elizabeth Brock</span> <span class="badge direct">line</span></span></summary>
+                      <ul>
+                        <li><details>
+                          <summary><span class="caret">▶</span><span><span class="tw">Elbert Lewis Cook</span> <span class="td">1941–2026</span> <span class="sp">&amp; Ellen Young</span> <span class="badge direct">line</span></span></summary>
+                          <ul>
+                            <li><details>
+                              <summary><span class="caret">▶</span><span><span class="tw">Christopher Brent &ldquo;Topher&rdquo; Cook</span> <span class="td">b. 1973</span> <span class="badge direct">line</span></span></summary>
+                              <ul>
+                                <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">Taryn Cook</span> <span class="td">b. 1996</span> · 3 children <span class="badge living">living</span></span></summary></li>
+                                <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">Kelsey Cook</span> <span class="td">b. 1999</span> · 2 children <span class="badge living">living</span></span></summary></li>
+                                <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">McKayla (Cook) Tillery</span> <span class="td">b. 2002</span> · 3 children <span class="badge living">living</span></span></summary></li>
+                              </ul>
+                            </details></li>
+                            <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">Marquetta Frances Cook</span> <span class="td">1944–2012</span></span></summary></li>
+                            <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">Doyle Wayne Cook</span> <span class="td">b. 1947</span></span></summary></li>
+                          </ul>
+                        </details></li>
+                        <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">Pearl Cook</span> <span class="td">1919–1929</span></span></summary></li>
+                        <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">Grace E. Cook</span> <span class="td">1921–1921</span></span></summary></li>
+                        <li><details>
+                          <summary><span class="caret">▶</span><span><span class="tw">Martha Ellen Cook</span> <span class="td">1923–2008</span> <span class="sp">&amp; Marvin Andrew Wilcher</span></span></summary>
+                          <ul>
+                            <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">Louise Wilcher</span> <span class="td">1942–1996</span></span></summary></li>
+                            <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">Lola Shirlene Wilcher</span> <span class="td">1943–2011</span></span></summary></li>
+                            <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">Wathenia Wilcher</span></span></summary></li>
+                            <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">Anita Wilcher</span> <span class="badge living">from family</span></span></summary></li>
+                          </ul>
+                        </details></li>
+                        <li><details>
+                          <summary><span class="caret">▶</span><span><span class="tw">Grady Cook</span> <span class="td">1926–2005</span> <span class="sp">&amp; Gladys Marie Pitchford</span></span></summary>
+                          <ul>
+                            <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">Frances Elaine &ldquo;Fran&rdquo; (Cook) Henson</span> <span class="td">1948–2021</span> <span class="badge living">living branch</span></span></summary></li>
+                          </ul>
+                        </details></li>
+                        <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">Roy Cook</span> <span class="td">1928–1985</span> <span class="sp">&amp; Betty Mae Blanton</span></span></summary></li>
+                        <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">Zella Cook</span> <span class="td">1931–1975</span></span></summary></li>
+                        <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">Albert Cook</span> <span class="td">1937–1937</span></span></summary></li>
+                        <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">Idabell Mae Cook</span> <span class="td">1939–2019</span> <span class="sp">&amp; Elbert Arthur Dedrick</span></span></summary></li>
+                      </ul>
+                    </details></li>
+                    <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">Charlie Grey Cook</span> <span class="td">1898–1981</span></span></summary></li>
+                    <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">Mattie (Cook) Carr</span> <span class="td">1902–1966</span></span></summary></li>
+                    <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">Marion Latimer Cook</span> <span class="td">1903–1937</span></span></summary></li>
+                    <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">Mary (Cook) Wilcher</span> <span class="td">1906–1943</span></span></summary></li>
+                  </ul>
+                </details></li>
+                <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">W. Benjamin Cook</span> <span class="td">b. 1846</span> · <span class="tw">Samuel M.</span> · <span class="tw">Sarah E.</span> · others</span></summary></li>
+              </ul>
+            </details></li>
+          </ul>
+        </details></li>
+        <li><details>
+          <summary><span class="caret">▶</span><span><span class="tw">Dr. John Taliaferro Cook</span> <span class="td">1842–1924</span> <span class="sp">&amp; Lucille Frances Wiles</span></span></summary>
+          <ul>
+            <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">James Alexander</span> <span class="td">1866–1938</span> · <span class="tw">Henry Scuddy</span> <span class="td">1866–1950</span> · <span class="tw">Elizabeth Leona</span> <span class="td">1868–1927</span></span></summary></li>
+            <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">William Robert</span> <span class="td">1870–1911</span> · <span class="tw">Sarah Susan</span> <span class="td">1872–1913</span> · <span class="tw">Bessie</span> <span class="td">1875–1968</span></span></summary></li>
+            <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">Eva</span> <span class="td">1879–1903</span> · <span class="tw">Mary</span> <span class="td">b. 1879</span> · <span class="tw">Homer</span> <span class="td">b. 1888</span></span></summary></li>
+          </ul>
+        </details></li>
+        <li><details>
+          <summary><span class="caret">▶</span><span><span class="tw">Sarah Elizabeth Cook</span> <span class="sp">&amp; John C. Haynie</span></span></summary>
+          <ul>
+            <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">Martha E.</span> <span class="td">~1849</span> · <span class="tw">Mary J.</span> <span class="td">~1851</span> · <span class="tw">William L.</span> <span class="td">~1853</span> · <span class="tw">John T.</span> <span class="td">~1858</span> · <span class="tw">Sarah L.</span> <span class="td">1860</span></span></summary></li>
+          </ul>
+        </details></li>
+        <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">Joseph W. Cook</span> <span class="td">d. 13 Apr 1848, Perote Castle, Mexico — Mexican War</span></span></summary></li>
+        <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">Samuel Cook</span> <span class="td">b. ~1822</span> <span class="badge gone">trail ends</span></span></summary></li>
+        <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">Moses J. Cook</span> <span class="badge gone">trail ends</span></span></summary></li>
+        <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">William L. Cook</span> <span class="td">b. ~1836</span> <span class="badge gone">trail ends</span></span></summary></li>
+        <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">Nancy (Cook) Roach</span> <span class="sp">&amp; William Roach</span> <span class="badge gone">left Anderson</span></span></summary></li>
+        <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">Mary (Cook) Verner</span> <span class="sp">&amp; Richard P. Verner</span> <span class="badge gone">left Anderson</span></span></summary></li>
+        <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">Martha F. (Cook) McCallister</span> <span class="sp">&amp; William A. McCallister</span> <span class="badge gone">left Anderson</span></span></summary></li>
+        <li class="leaf"><summary><span class="caret">▶</span><span><span class="tw">Lucinda Cook</span> <span class="td">~1834 – by 1857</span></span></summary></li>
+      </ul>
+    </details>
+    </div>
+  </details>
+</div></section>
+
+<!-- ARKANSAS -->
+<section id="arkansas"><div class="wrap">
+  <div class="lab eyebrow">The Soldier Who Went West</div>
+  <h2 class="disp">The Arkansas Cooks</h2>
+  <hr class="rule">
+  <p class="lead">If the family has a hero, it is <strong>John Wesley Cook</strong> (1844–1931). He fought three years in the Civil War — Company F of the 24th South Carolina, then Hampton's Legion — marching with <strong>Robert E. Lee</strong>'s army nearly to Appomattox, and walked home in April 1865 so worn out his mother thought he'd come back from the dead.</p>
+
+  <h3 class="disp">Under Robert E. Lee</h3>
+  <p>By June of 1864 John Wesley's regiment had reached Richmond and was serving in the <strong>Army of Northern Virginia under General Robert E. Lee</strong>. He was there for the army's last year — the long defense of Richmond and Petersburg, the evacuation of the capital on the 3rd of April, 1865, and the final retreat westward that ended at Appomattox Court House on the 9th. In the plainest sense, John Wesley Cook was a soldier of <em>Robert E. Lee's last stand</em> — one of the men in that final, dwindling army.</p>
+  <p>Honesty asks a footnote: there is no record that a private cavalryman like John Wesley ever spoke with the general himself. In an army of tens of thousands, the two would never have crossed paths, and his letters claim no such thing. But his own account preserves a detail worth keeping — his companies, <strong>I and B, did not surrender with Lee.</strong> As the army came apart in those last days, the two companies slipped away, stayed together until they reached Spartanburg, South Carolina, and there disbanded. John Wesley walked home a soldier who never formally laid down his arms — carrying the war's end with him rather than handing it over.</p>
+  <blockquote>&ldquo;I arrived home on the 4th of April, 1865 — a tired, sick and lonely boy. When my mother saw me she ran and clasped my hand, saying, &lsquo;I thought you were dead!&rsquo;&rdquo;<br><span class="lab" style="color:var(--muted)">— J. W. Cook, in his own hand, 1928</span></blockquote>
+  <p>In 1881 he loaded a wagon behind a mule team and set out for Arkansas, took up a homestead of 160 acres near Wickes, and said he was &ldquo;the best satisfied of any man that ever came to this county.&rdquo; He cut sprouts all day before the night he died, at 87. Every Arkansas Cook descends from him.</p>
+
+  <h3 class="disp">Benjamin Franklin Cook's nine children</h3>
+  <p>Our line runs through John Wesley's son <strong>Benjamin Franklin Cook (1893–1962)</strong> and <strong>Laura Elizabeth Oglesby (1896–1939)</strong>, married in Wickes in 1914. The old family list remembered six children; the record shows <strong>nine</strong> — three died as infants or small children.</p>
+  <div class="grid">
+    <div class="card g"><h4>Lewis Elvoy Cook</h4><div class="dt">1916 – 1999 · the direct line ↓</div></div>
+    <div class="card"><h4>Pearl Cook</h4><div class="dt">1919 – 1929</div></div>
+    <div class="card"><h4>Grace E. Cook</h4><div class="dt">1921 – 1921</div></div>
+    <div class="card g"><h4>Martha Ellen Cook</h4><div class="dt">1923 – 2008 · m. Marvin Andrew Wilcher</div><ul><li>Louise Wilcher (1942–1996)</li><li>Lola Shirlene Wilcher (1943–2011)</li><li>Wathenia Wilcher</li><li>Anita Wilcher <span class="dt">(from family memory)</span></li></ul></div>
+    <div class="card g"><h4>Grady Cook</h4><div class="dt">1926 – 2005 · m. Gladys Marie Pitchford</div><ul><li>Frances Elaine &ldquo;Fran&rdquo; (Cook) Henson (1948–2021)</li></ul></div>
+    <div class="card"><h4>Roy Cook</h4><div class="dt">1928 – 1985 · m. Betty Mae Blanton</div></div>
+    <div class="card"><h4>Zella Cook</h4><div class="dt">1931 – 1975</div></div>
+    <div class="card"><h4>Albert Cook</h4><div class="dt">1937 – 1937</div></div>
+    <div class="card"><h4>Idabell Mae Cook</h4><div class="dt">1939 – 2019 · m. Elbert Arthur Dedrick</div></div>
+  </div>
+  <div class="note" style="margin-top:20px">The <strong>cousins' branches</strong> — through Martha Ellen's Wilcher daughters and Grady's daughter Fran — carry on today among living family kept private on this page. If you are one of them, your branch has a place here waiting; see <a href="#add">Add Your Branch</a>.</div>
+</div></section>
+
+<!-- ROOTS -->
+<section id="roots"><div class="wrap">
+  <div class="lab eyebrow">Before the Cooks</div>
+  <h2 class="disp">The Deeper Roots — the Mouchet Line</h2>
+  <hr class="rule">
+  <p>Through John Wesley's mother, <strong>Matilda Mouchet</strong>, the family reaches back further than the Cook name itself — to the immigrant generation of about 1740, on the Carolina frontier before there was a United States.</p>
+  <div class="spine">
+    <div class="node"><div class="nm">Samuel Charles Mouchet</div><div class="dt">~1740 (immigrant) – ~1800, Abbeville, S.C. &nbsp;·&nbsp; m. Barbara Ann McCurdy (1743–1800)</div></div>
+    <div class="link-v"></div>
+    <div class="node"><div class="nm">Jacob Mouchet</div><div class="dt">1795 – 1878 &nbsp;·&nbsp; m. Mary New (1795–1882)</div></div>
+    <div class="link-v"></div>
+    <div class="node"><div class="nm">Matilda Mouchet</div><div class="dt">b. ~1820 &nbsp;·&nbsp; m. Thomas Alexander Cook</div></div>
+  </div>
+  <p style="margin-top:22px">The Mouchets were of French and German origin; Barbara Ann McCurdy's people were <strong>Ulster Scots</strong> — Scots-Irish Presbyterians who came down the Great Wagon Road into the Carolina backcountry. That is as far back as the record honestly reaches: the crossings of about 1740. Beyond them, into the old world, the trail goes quiet.</p>
+</div></section>
+
+<!-- WALLS -->
+<section id="walls"><div class="wrap">
+  <div class="lab eyebrow">Honestly</div>
+  <h2 class="disp">The Walls — where the trail runs cold</h2>
+  <hr class="rule">
+  <p>A family history is only as good as its honesty. Here is exactly where the record stops, so that whoever comes after us does not start from nothing.</p>
+  <div class="cols" style="margin-top:8px">
+    <div class="note"><strong>Above William.</strong> William was born in <em>Georgia</em> about 1794 — so his father was a Georgian of the 1790s, where records are thin and many are lost. His parents, and his wife Sarah's maiden name, remain unfound. An older William Cook and a &ldquo;Charles Cook of Generostee&rdquo; are candidates, but none can be proven.</div>
+    <div class="note"><strong>The Southern branches.</strong> Four of William's children — Nancy (Roach), Mary (Verner), Martha (McCallister), and the sons Samuel and Moses — left Anderson County after the 1850s into records too common-named to follow. Their descendants are out there, unmapped.</div>
+  </div>
+  <p style="margin-top:22px">There is one route that can leap a pre-1800, cross-state wall like William's: a <strong>Y-DNA test</strong> of a living Cook man of the direct male line, matched against documented Cook families. That door is still open. Elbert left it open; so do we.</p>
+</div></section>
+
+<!-- ADD -->
+<section id="add"><div class="wrap">
+  <div class="lab eyebrow">For the Family</div>
+  <h2 class="disp">Add Your Branch</h2>
+  <hr class="rule">
+  <p class="lead">This tree grows every time a cousin fills in a gap. If you descend from any of these Cooks — especially the Wilcher, Henson, Roy, or Idabell lines, or a Southern branch that left Carolina — your family belongs here.</p>
+  <p>What helps most: your <strong>parents and grandparents' names, birth years, and where they lived</strong>, and how you connect back to Benjamin Franklin Cook or John Wesley Cook. Names of living people are kept private on this page unless you say otherwise. Send what you have to the family, and it will be added, checked against the record, and set down for good.</p>
+  <div class="note">Every name in this history was read in a real document or given by family who knew. Yours will be too.</div>
+</div></section>
+
+<!-- MEMORY -->
+<section id="memory"><div class="wrap" style="text-align:center">
+  <div class="lab eyebrow" style="color:var(--gold)">In Memoriam</div>
+  <h2 class="disp" style="text-align:center">Elbert Lewis Cook &nbsp;·&nbsp; 1941 – 2026</h2>
+  <hr class="rule" style="margin-left:auto;margin-right:auto">
+  <div class="mem">
+    <p>He was not a professional historian. He was a Cook — one of a long line of them — who decided the people who came before us should not be forgotten. He wrote to distant cousins, saved old letters, copied census pages, and filled folders with the names of people gone a hundred years, because he believed those names mattered.</p>
+    <p style="font-style:italic;color:var(--muted)">He meant one day to make it a book. This is that book's other half — his work, carried a little further down the road he opened. It is for him.</p>
+  </div>
+</div></section>
+
+<footer>
+  <div class="lab">The Cook Family &middot; Georgia · Carolina · Arkansas</div>
+  <p style="max-width:560px;margin:14px auto 0;font-style:italic;opacity:.9">From an immigrant of the 1740s to the children of today — eight generations of one family, set down at last, in memory of Elbert Lewis Cook.</p>
+</footer>
+
+<script>
+(function(){
+  /* ---- text outline toggles ---- */
+  var outline=document.getElementById('outline');
+  if(outline){
+    document.getElementById('expandAll').addEventListener('click',function(){
+      outline.querySelectorAll('details').forEach(function(d){d.open=true;});
+    });
+    document.getElementById('collapseAll').addEventListener('click',function(){
+      outline.querySelectorAll('details').forEach(function(d,i){d.open=(i===0);});
+    });
+  }
+
+  /* ---- visual family chart ---- */
+  var DATA={n:"William Cook",d:"~1794 GA – 1851",s:"Sarah",dir:1,c:[
+    {n:"Thomas Alexander Cook",d:"1824–1854",s:"Matilda Mouchet",dir:1,c:[
+      {n:"Mary J. Cook",d:"b. ~1843"},
+      {n:"John Wesley Cook",d:"1844–1931",s:"Emma Bryan · Virginia May",dir:1,c:[
+        {n:"John Lewis Cook",d:"1869–1934",s:"Annie Schoolfield",c:[
+          {n:"Minnie Beatrice Cook",d:"1897–1986"},
+          {n:"Forney Lewis Cook",d:"1900–1930"},
+          {n:"Annie Ester Cook",d:"1901–1967"},
+          {n:"George Lonnie Cook",d:"1903–1978"},
+          {n:"Cozie Myrtle Cook",d:"1905–1969"},
+          {n:"Sarah Emma Cook",d:"1907–2003"},
+          {n:"Tacie Clara Cook",d:"1909–1986"}
+        ]},
+        {n:"James W. Cook",d:"1873–1947"},
+        {n:"David Lucius Cook",d:"1877–1957"},
+        {n:"Amanda Cornelia Cook",d:"1880–1881"},
+        {n:"Jessie Ligon Cook",d:"b. 1882"},
+        {n:"William Hampton Cook",d:"1889–1921"},
+        {n:"George T. Cook",d:"1889–1917"},
+        {n:"Joe Cook",d:"1890–1966"},
+        {n:"Allie (Cook) Lusty",d:"1892–1935"},
+        {n:"Benjamin Franklin Cook",d:"1893–1962",s:"Laura Oglesby",dir:1,c:[
+          {n:"Lewis Elvoy Cook",d:"1916–1999",s:"Elizabeth Brock",dir:1,c:[
+            {n:"Elbert Lewis Cook",d:"1941–2026",s:"Ellen Young",dir:1,c:[
+              {n:"Christopher “Topher” Cook",d:"b. 1973",dir:1,c:[
+                {n:"Taryn Cook",d:"b. 1996 · 3 kids",liv:1},
+                {n:"Kelsey Cook",d:"b. 1999 · 2 kids",liv:1},
+                {n:"McKayla (Cook) Tillery",d:"b. 2002 · 3 kids",liv:1}
+              ]},
+              {n:"Marquetta Frances Cook",d:"1944–2012"},
+              {n:"Doyle Wayne Cook",d:"b. 1947"}
+            ]}
+          ]},
+          {n:"Pearl Cook",d:"1919–1929"},
+          {n:"Grace E. Cook",d:"1921–1921"},
+          {n:"Martha Ellen Cook",d:"1923–2008",s:"Marvin A. Wilcher",c:[
+            {n:"Louise Wilcher",d:"1942–1996"},
+            {n:"Lola Shirlene Wilcher",d:"1943–2011"},
+            {n:"Wathenia Wilcher"},
+            {n:"Anita Wilcher",d:"(from family)",liv:1}
+          ]},
+          {n:"Grady Cook",d:"1926–2005",s:"Gladys M. Pitchford",c:[
+            {n:"Frances “Fran” Henson",d:"1948–2021 (b. Cook)",liv:1}
+          ]},
+          {n:"Roy Cook",d:"1928–1985",s:"Betty Mae Blanton"},
+          {n:"Zella Cook",d:"1931–1975"},
+          {n:"Albert Cook",d:"1937–1937"},
+          {n:"Idabell Mae Cook",d:"1939–2019",s:"Elbert A. Dedrick"}
+        ]},
+        {n:"Charlie Grey Cook",d:"1898–1981"},
+        {n:"Mattie (Cook) Carr",d:"1902–1966"},
+        {n:"Marion Latimer Cook",d:"1903–1937"},
+        {n:"Mary (Cook) Wilcher",d:"1906–1943"}
+      ]},
+      {n:"W. Benjamin · Samuel M. · Sarah E.",d:"Thomas's other children"}
+    ]},
+    {n:"Dr. John Taliaferro Cook",d:"1842–1924",s:"Lucille Wiles",c:[
+      {n:"James Alexander Cook",d:"1866–1938"},
+      {n:"Henry Scuddy Cook",d:"1866–1950"},
+      {n:"Elizabeth Leona Cook",d:"1868–1927"},
+      {n:"William Robert Cook",d:"1870–1911"},
+      {n:"Sarah Susan Cook",d:"1872–1913"},
+      {n:"Bessie Cook",d:"1875–1968"},
+      {n:"Eva Cook",d:"1879–1903"},
+      {n:"Mary Cook",d:"b. 1879"},
+      {n:"Homer Cook",d:"b. 1888"}
+    ]},
+    {n:"Sarah Elizabeth Cook",s:"John C. Haynie",c:[
+      {n:"Martha E. Haynie",d:"~1849"},
+      {n:"Mary J. Haynie",d:"~1851"},
+      {n:"William L. Haynie",d:"~1853"},
+      {n:"John T. Haynie",d:"~1858"},
+      {n:"Sarah L. Haynie",d:"1860"}
+    ]},
+    {n:"Joseph W. Cook",d:"d. 1848, Mexico"},
+    {n:"Samuel Cook",d:"b. ~1822",gone:1},
+    {n:"Moses J. Cook",gone:1},
+    {n:"William L. Cook",d:"b. ~1836",gone:1},
+    {n:"Nancy (Cook) Roach",s:"William Roach",gone:1},
+    {n:"Mary (Cook) Verner",s:"Richard P. Verner",gone:1},
+    {n:"Martha F. (Cook) McCallister",s:"Wm. A. McCallister",gone:1},
+    {n:"Lucinda Cook",d:"~1834 – 1857"}
+  ]};
+
+  var nodes=[], idc=0;
+  (function assign(n){ n._id=idc++; nodes.push(n); (n.c||[]).forEach(assign); })(DATA);
+
+  var NW=192, NH=46, XG=228, YG=58;
+  var svg=document.getElementById('famchart');
+  var vp=document.getElementById('viewport');
+  var yc;
+  function layout(n,depth){
+    n.x=depth*XG;
+    var kids=(!n._col && n.c && n.c.length)?n.c:null;
+    if(kids){ kids.forEach(function(k){layout(k,depth+1);}); n.y=(kids[0].y+kids[kids.length-1].y)/2; }
+    else { n.y=yc; yc+=YG; }
+  }
+  function esc(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+  function clip(s,m){ s=s||''; return s.length>m? s.slice(0,m-1)+'…':s; }
+  function vwalk(cb){ (function w(n){ cb(n); if(!n._col && n.c) n.c.forEach(w); })(DATA); }
+
+  function render(){
+    yc=0; layout(DATA,0);
+    var links='', boxes='';
+    vwalk(function(n){
+      var kids=(!n._col && n.c && n.c.length)?n.c:null;
+      if(kids) kids.forEach(function(k){
+        var x1=n.x+NW, y1=n.y+NH/2, x2=k.x, y2=k.y+NH/2, mx=x1+(x2-x1)/2;
+        links+='<path class="link'+((n.dir&&k.dir)?' direct':'')+'" d="M'+x1+' '+y1+' H'+mx+' V'+y2+' H'+x2+'"/>';
+      });
+    });
+    vwalk(function(n){
+      var has=n.c&&n.c.length;
+      var cls='box'+(n.dir?' direct':'')+(n.liv?' living':'')+(n.gone?' gone':'')+(has?' has':'');
+      var sub=[n.d, n.s?('m. '+n.s):''].filter(Boolean).join('   ·   ');
+      var g='<g transform="translate('+n.x+','+n.y+')" data-id="'+n._id+'">';
+      g+='<rect class="'+cls+'" width="'+NW+'" height="'+NH+'" rx="9"/>';
+      g+='<text class="nm" x="12" y="20">'+esc(clip(n.n,27))+'</text>';
+      if(sub) g+='<text class="dt" x="12" y="35">'+esc(clip(sub,35))+'</text>';
+      if(has){ g+='<g class="tog"><circle cx="'+NW+'" cy="'+(NH/2)+'" r="10"/><text class="tog-t" x="'+NW+'" y="'+(NH/2+4.5)+'" text-anchor="middle">'+(n._col?'+':'–')+'</text></g>'; }
+      g+='</g>';
+      boxes+=g;
+    });
+    vp.innerHTML=links+boxes;
+  }
+
+  var tx=40, ty=40, sc=0.82;
+  function apply(){ vp.setAttribute('transform','translate('+tx+' '+ty+') scale('+sc+')'); }
+  function extents(){ var a={x0:1e9,y0:1e9,x1:-1e9,y1:-1e9};
+    vwalk(function(n){ a.x0=Math.min(a.x0,n.x); a.y0=Math.min(a.y0,n.y); a.x1=Math.max(a.x1,n.x+NW); a.y1=Math.max(a.y1,n.y+NH); });
+    return a; }
+  function fit(){ var a=extents(), w=svg.clientWidth||800, h=svg.clientHeight||560, pad=26;
+    var sw=a.x1-a.x0, sh=a.y1-a.y0;
+    sc=Math.min((w-2*pad)/sw,(h-2*pad)/sh,1.05); if(!isFinite(sc)||sc<=0)sc=0.5;
+    tx=pad-a.x0*sc+((w-2*pad)-sw*sc)/2; ty=pad-a.y0*sc+((h-2*pad)-sh*sc)/2; apply(); }
+
+  render();
+  requestAnimationFrame(fit);
+
+  var drag=null, moved=false;
+  svg.addEventListener('pointerdown',function(e){ drag={x:e.clientX,y:e.clientY,tx:tx,ty:ty}; moved=false; svg.classList.add('grabbing'); try{svg.setPointerCapture(e.pointerId);}catch(_){} });
+  svg.addEventListener('pointermove',function(e){ if(!drag)return; var dx=e.clientX-drag.x, dy=e.clientY-drag.y; if(Math.abs(dx)+Math.abs(dy)>4)moved=true; tx=drag.tx+dx; ty=drag.ty+dy; apply(); });
+  svg.addEventListener('pointerup',function(e){ svg.classList.remove('grabbing');
+    if(!moved){ var g=e.target.closest('[data-id]'); if(g){ var n=nodes[+g.getAttribute('data-id')]; if(n&&n.c&&n.c.length){ n._col=!n._col; render(); apply(); } } }
+    drag=null; });
+  svg.addEventListener('pointercancel',function(){ drag=null; svg.classList.remove('grabbing'); });
+  svg.addEventListener('wheel',function(e){ e.preventDefault();
+    var r=svg.getBoundingClientRect(), mx=e.clientX-r.left, my=e.clientY-r.top;
+    var f=e.deltaY<0?1.12:1/1.12, ns=Math.max(0.22,Math.min(2.4,sc*f));
+    tx=mx-(mx-tx)*(ns/sc); ty=my-(my-ty)*(ns/sc); sc=ns; apply(); },{passive:false});
+  function zb(f){ var r=svg.getBoundingClientRect(), mx=r.width/2, my=r.height/2, ns=Math.max(0.22,Math.min(2.4,sc*f)); tx=mx-(mx-tx)*(ns/sc); ty=my-(my-ty)*(ns/sc); sc=ns; apply(); }
+
+  document.querySelector('.chart-wrap .ctrls').addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b)return; var act=b.getAttribute('data-act');
+    if(act==='fit'||act==='expand'){ nodes.forEach(function(n){n._col=false;}); render(); fit(); }
+    else if(act==='line'){ nodes.forEach(function(n){ n._col=!n.dir; }); render(); fit(); }
+    else if(act==='zin'){ zb(1.16); }
+    else if(act==='zout'){ zb(1/1.16); }
+  });
+})();
+</script>
+</body>
+</html>
