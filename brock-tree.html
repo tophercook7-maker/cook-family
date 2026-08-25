@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<meta name="description" content="The Brock family tree — Topher's grandmother Elizabeth Susan Brock traced back eight generations to George Friderick Brock (~1734, Augusta County, Virginia). Virginia → North Carolina → Georgia → Polk County, Arkansas.">
+<title>The Brock Line — Topher's Grandmother's People</title>
+<style>
+  :root{
+    --bg:#ece5d1;--card:#f7f2e3;--card2:#fffdf6;--ink:#242b20;--muted:#6c7360;
+    --line:#c8bd9d;--green:#33506b;--green2:#3f6488;--gold:#a97f27;--gold-soft:#e8dab4;
+    --hero:#22384a;--hero-ink:#f2ecd8;--shadow:0 2px 10px rgba(50,45,20,.14);
+  }
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+    --bg:#0e1116;--card:#181d24;--card2:#1e242c;--ink:#e6e6de;--muted:#98a0a8;
+    --line:#33404d;--green:#7ea6c9;--green2:#93b6d4;--gold:#d7b25e;--gold-soft:#2d2a1c;
+    --hero:#14212c;--hero-ink:#e9edf2;--shadow:0 2px 12px rgba(0,0,0,.5);}}
+  :root[data-theme="dark"]{
+    --bg:#0e1116;--card:#181d24;--card2:#1e242c;--ink:#e6e6de;--muted:#98a0a8;
+    --line:#33404d;--green:#7ea6c9;--green2:#93b6d4;--gold:#d7b25e;--gold-soft:#2d2a1c;
+    --hero:#14212c;--hero-ink:#e9edf2;--shadow:0 2px 12px rgba(0,0,0,.5);}
+  *{box-sizing:border-box}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;line-height:1.5}
+  .lab{font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;text-transform:uppercase;
+    letter-spacing:.22em;font-size:.66rem;font-weight:600}
+  header{background:linear-gradient(180deg,var(--hero),color-mix(in srgb,var(--hero) 80%,#000));
+    color:var(--hero-ink);text-align:center;padding:52px 22px 44px;border-bottom:3px solid var(--gold)}
+  header .lab{color:var(--gold)}
+  header h1{font-family:"Hoefler Text",Baskerville,Georgia,serif;font-size:clamp(2.2rem,6vw,3.4rem);
+    margin:.2em 0 .1em;line-height:1.04}
+  header p{margin:0;font-style:italic;opacity:.94;max-width:580px;margin:0 auto}
+  .hint{display:inline-block;margin-top:18px;font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;
+    font-size:.76rem;letter-spacing:.03em;color:var(--gold);border:1px solid rgba(217,192,120,.4);
+    border-radius:20px;padding:6px 14px}
+  .wrap{max-width:840px;margin:0 auto;padding:30px 20px 60px}
+  .bandlab{text-align:center;color:var(--gold);margin:34px 0 12px}
+  .intro{max-width:600px;margin:0 auto 6px;text-align:center;color:var(--muted);font-style:italic}
+  .spine{display:flex;flex-direction:column;align-items:center;gap:0}
+  .link{width:2px;height:20px;background:var(--line)}
+
+  .person{background:var(--card);border:1px solid var(--line);border-radius:13px;width:100%;
+    max-width:460px;box-shadow:var(--shadow);outline:none;transition:border-color .2s,box-shadow .2s}
+  .person:hover,.person:focus,.person:focus-within{border-color:var(--gold);box-shadow:0 4px 18px rgba(50,45,20,.2)}
+  .person:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .person.direct{border-left:4px solid var(--gold)}
+  .phead{padding:12px 18px;display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+  .phead .nm{font-family:"Hoefler Text",Baskerville,Georgia,serif;font-weight:700;font-size:1.1rem}
+  .phead .yr{font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;font-size:.82rem;color:var(--muted);
+    white-space:nowrap;font-variant-numeric:tabular-nums}
+  .more{max-height:0;opacity:0;overflow:hidden;transition:max-height .34s ease,opacity .3s ease}
+  .person:hover .more,.person:focus .more,.person:focus-within .more{max-height:360px;opacity:1}
+  .more-in{padding:0 18px 15px;border-top:1px solid var(--line);margin-top:2px}
+  .more-in dl{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;margin:11px 0 0;font-size:.92rem}
+  .more-in dt{color:var(--gold);font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;font-size:.72rem;
+    text-transform:uppercase;letter-spacing:.08em;padding-top:3px}
+  .more-in dd{margin:0}
+  .more-in .story{margin:10px 0 0;font-style:italic;color:var(--muted);font-size:.92rem}
+  .opencue{font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;font-size:.64rem;color:var(--gold);
+    letter-spacing:.06em;opacity:.7}
+  .person:hover .opencue,.person:focus-within .opencue{opacity:0}
+
+  .bridge{max-width:460px;width:100%;margin:4px auto 0;background:var(--gold-soft);
+    border:1px dashed var(--gold);border-radius:13px;padding:14px 18px;text-align:center}
+  .bridge .t{font-family:"Hoefler Text",Baskerville,Georgia,serif;font-weight:700}
+  .bridge p{margin:5px 0 0;color:var(--muted);font-size:.9rem}
+  .bridge a{display:inline-block;margin-top:10px;background:var(--green);color:#fff;text-decoration:none;
+    font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;font-size:.8rem;font-weight:600;
+    padding:9px 18px;border-radius:8px}
+
+  .chips{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;max-width:780px;margin:2px auto 0}
+  .chip{background:var(--card);border:1px solid var(--line);border-radius:11px;box-shadow:var(--shadow);
+    width:232px;outline:none;transition:border-color .2s}
+  .chip:hover,.chip:focus,.chip:focus-within{border-color:var(--gold)}
+  .chip .chead{padding:8px 12px}
+  .chip .cn{font-family:"Hoefler Text",Baskerville,Georgia,serif;font-weight:700;font-size:.95rem;line-height:1.15}
+  .chip .cy{font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;font-size:.72rem;color:var(--muted)}
+  .chip .cmore{max-height:0;opacity:0;overflow:hidden;transition:max-height .3s,opacity .25s}
+  .chip:hover .cmore,.chip:focus .cmore,.chip:focus-within .cmore{max-height:220px;opacity:1}
+  .chip .cmore-in{padding:0 12px 11px;border-top:1px solid var(--line);font-size:.84rem;color:var(--muted)}
+  .chip .cmore-in .s{font-style:italic;margin-top:6px;display:block}
+
+  .journey{max-width:640px;margin:20px auto 0;background:var(--card2);border:1px solid var(--line);
+    border-radius:13px;padding:18px 22px;box-shadow:var(--shadow)}
+  .journey b{color:var(--green)}
+  .journey .steps{font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;font-size:.86rem;
+    letter-spacing:.02em;margin:8px 0 0;color:var(--muted)}
+
+  footer{background:var(--hero);color:var(--hero-ink);text-align:center;padding:34px 22px;border-top:3px solid var(--gold)}
+  footer .lab{color:var(--gold)}
+  footer a{color:var(--gold);text-decoration:none;font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;
+    font-size:.82rem;letter-spacing:.04em}
+</style>
+</head>
+<body>
+<header>
+  <div class="lab">The Brock Line · Virginia · Carolina · Georgia · Arkansas</div>
+  <h1>The Brock Family Tree</h1>
+  <p>Topher's grandmother's people — traced eight generations, from colonial Virginia in 1734 down to the woman who married into the Cooks.</p>
+  <div class="hint">✦ Hover any name to open their story — tap on a phone</div>
+</header>
+
+<div class="wrap">
+
+  <div class="bandlab lab">The Direct Line — eight generations</div>
+  <p class="intro">Oldest at the top. Every name below is a straight-line grandparent of Topher, on his father's mother's side.</p>
+  <div class="spine">
+
+    <div class="person direct" tabindex="0"><div class="phead"><span class="nm">George Friderick Brock</span><span class="yr">~1734 – 1807 <span class="opencue">▾</span></span></div>
+      <div class="more"><div class="more-in"><dl><dt>Born</dt><dd>about 1734</dd><dt>Married</dt><dd>Mary Ann Bunker (1736–1808), in 1753 at Forestville, Augusta County, Virginia</dd><dt>Children</dt><dd>Seven</dd></dl><p class="story">The deepest proven Brock — colonial Virginia stock. The spelling &ldquo;Friderick&rdquo; hints at a German (Palatine) origin still waiting to be traced further back.</p></div></div></div>
+    <div class="link"></div>
+
+    <div class="person direct" tabindex="0"><div class="phead"><span class="nm">George Brock Jr.</span><span class="yr">1762 – 1853 <span class="opencue">▾</span></span></div>
+      <div class="more"><div class="more-in"><dl><dt>Served</dt><dd>War of 1812 (service 1812–1815)</dd><dt>Lived</dt><dd>Pendleton District, South Carolina (1800) — then Habersham &amp; Gilmer Co., Georgia</dd><dt>Married</dt><dd>Frances Riggan (1767–1850), 1781</dd></dl><p class="story">A soldier of the second war for independence — and, by coincidence, he lived in the very same South Carolina upcountry district as the Cook family a generation before the two lines ever met.</p></div></div></div>
+    <div class="link"></div>
+
+    <div class="person direct" tabindex="0"><div class="phead"><span class="nm">Thomas S. Brock</span><span class="yr">1782 – 1850 <span class="opencue">▾</span></span></div>
+      <div class="more"><div class="more-in"><dl><dt>Of</dt><dd>North Carolina</dd><dt>Married</dt><dd>Jane Higgins (1781–1850), before 1797</dd><dt>Children</dt><dd>Twelve</dd></dl><p class="story">The generation that carried the Brocks out of the Carolinas and toward Georgia.</p></div></div></div>
+    <div class="link"></div>
+
+    <div class="person direct" tabindex="0"><div class="phead"><span class="nm">John Henry Brock</span><span class="yr">1803 – 1880 <span class="opencue">▾</span></span></div>
+      <div class="more"><div class="more-in"><dl><dt>Married</dt><dd>Sarah &ldquo;Sallie&rdquo; Anderson (1798–1884), 28 Feb 1822, Habersham County, Georgia</dd></dl><p class="story">Married in the Georgia hill country — the Brocks were southern farmers now, moving with the frontier.</p></div></div></div>
+    <div class="link"></div>
+
+    <div class="person direct" tabindex="0"><div class="phead"><span class="nm">Thomas Anderson Brock</span><span class="yr">1823 – 1908 <span class="opencue">▾</span></span></div>
+      <div class="more"><div class="more-in"><dl><dt>Married</dt><dd>Mary Jane Catherine Towry (1841–1916), 23 Oct 1865, Lebow, Polk County, Arkansas</dd><dt>Children</dt><dd>Thirteen</dd></dl><p class="story">The generation that reached Arkansas — settling Polk County, the same corner of the state the Cooks would come to. Thirteen children put down deep roots there.</p></div></div></div>
+    <div class="link"></div>
+
+    <div class="person direct" tabindex="0"><div class="phead"><span class="nm">John Anderson Brock</span><span class="yr">1871 – 1922 <span class="opencue">▾</span></span></div>
+      <div class="more"><div class="more-in"><dl><dt>Married</dt><dd>Rachel Bell Guest (1874–1949), 1894</dd><dt>Home</dt><dd>White Township / Faulkner, Polk County, Arkansas</dd><dt>Children</dt><dd>Ten</dd></dl><p class="story">An Arkansas farmer, father of ten.</p></div></div></div>
+    <div class="link"></div>
+
+    <div class="person direct" tabindex="0"><div class="phead"><span class="nm">Thomas Benton Brock</span><span class="yr">1895 – 1962 <span class="opencue">▾</span></span></div>
+      <div class="more"><div class="more-in"><dl><dt>Served</dt><dd>World War I — Company F, 119th Infantry</dd><dt>Married</dt><dd>Lorena Frances Hicks (1901–1981), 18 Dec 1919, Polk County, Arkansas</dd><dt>Children</dt><dd>Eight</dd></dl><p class="story">A doughboy of the Great War, and Elizabeth's father. A striking family echo: a Company-F man here, and John Wesley Cook's Civil War service on the other side — soldiers on both branches.</p></div></div></div>
+    <div class="link"></div>
+
+    <div class="person direct" tabindex="0"><div class="phead"><span class="nm">Elizabeth Susan Brock</span><span class="yr">1925 – 1951 <span class="opencue">▾</span></span></div>
+      <div class="more"><div class="more-in"><dl><dt>Born</dt><dd>rural Polk County, Arkansas</dd><dt>Lived</dt><dd>McCurtain County, Oklahoma</dd><dt>Married</dt><dd>Lewis Elvoy Cook, 1 July 1940, Polk County, Arkansas</dd></dl><p class="story">Topher's grandmother. She married into the Cook family at fifteen, became the mother of Elbert Lewis Cook — and died young, at about twenty-six. This whole line is the inheritance she carried into the Cooks.</p></div></div></div>
+  </div>
+
+  <div class="bridge">
+    <div class="t">…and here the Brock line joins the Cooks.</div>
+    <p>Elizabeth married <strong>Lewis Elvoy Cook</strong> in 1940. Their son was Elbert — Topher's father.</p>
+    <a href="family-tree.html">See the Cook tree from here →</a>
+  </div>
+
+  <div class="journey">
+    <div class="lab" style="color:var(--gold)">The Journey</div>
+    <p style="margin:8px 0 0"><b>Virginia</b> (1730s) → <b>North Carolina</b> (1780s) → <b>Georgia</b>, the Habersham &amp; Gilmer hill country (1800s–1820s) → <b>Arkansas</b>, Polk County (from the mid-1800s to today).</p>
+    <p class="steps">Eight generations, roughly 1734 to now. The Brock side reaches further back than the Cook side does — all the way to colonial Virginia.</p>
+  </div>
+
+  <div class="bandlab lab">The Families Who Married In</div>
+  <p class="intro">Every wife on this line opens a new branch of her own. Each of these is a surname waiting to be pulled.</p>
+  <div class="chips">
+    <div class="chip" tabindex="0"><div class="chead"><div class="cn">Mary Ann Bunker</div><div class="cy">1736–1808 · Virginia</div></div><div class="cmore"><div class="cmore-in">m. George Friderick Brock, 1753, Augusta County, Virginia.<span class="s">The Bunker line — the deepest marriage-in, colonial Virginia.</span></div></div></div>
+    <div class="chip" tabindex="0"><div class="chead"><div class="cn">Frances Riggan</div><div class="cy">1767–1850</div></div><div class="cmore"><div class="cmore-in">m. George Brock Jr., 1781.<span class="s">The Riggan line.</span></div></div></div>
+    <div class="chip" tabindex="0"><div class="chead"><div class="cn">Jane Higgins</div><div class="cy">1781–1850</div></div><div class="cmore"><div class="cmore-in">m. Thomas S. Brock, before 1797.<span class="s">The Higgins line — twelve children.</span></div></div></div>
+    <div class="chip" tabindex="0"><div class="chead"><div class="cn">Sarah &ldquo;Sallie&rdquo; Anderson</div><div class="cy">1798–1884</div></div><div class="cmore"><div class="cmore-in">m. John Henry Brock, 1822, Habersham County, Georgia.<span class="s">The Anderson line.</span></div></div></div>
+    <div class="chip" tabindex="0"><div class="chead"><div class="cn">Mary Jane Catherine Towry</div><div class="cy">1841–1916</div></div><div class="cmore"><div class="cmore-in">m. Thomas Anderson Brock, 1865, Polk County, Arkansas.<span class="s">The Towry line — thirteen children.</span></div></div></div>
+    <div class="chip" tabindex="0"><div class="chead"><div class="cn">Rachel Bell Guest</div><div class="cy">1874–1949</div></div><div class="cmore"><div class="cmore-in">m. John Anderson Brock, 1894.<span class="s">The Guest line — ten children.</span></div></div></div>
+    <div class="chip" tabindex="0"><div class="chead"><div class="cn">Lorena Frances Hicks</div><div class="cy">1901–1981</div></div><div class="cmore"><div class="cmore-in">m. Thomas Benton Brock, 1919, Polk County, Arkansas.<span class="s">The Hicks line — Elizabeth's mother.</span></div></div></div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="lab">The Brock Line · Topher's grandmother, Elizabeth Susan Brock (1925–1951)</div>
+  <p style="max-width:580px;margin:12px auto 0;font-style:italic;opacity:.9">Traced from the family record — eight generations, from colonial Virginia to the Arkansas hills. Names sourced from the collaborative genealogy; dates to be confirmed against the original census and vital records.</p>
+  <p style="margin:18px 0 0"><a href="index.html">← The full family history</a> &nbsp;·&nbsp; <a href="family-tree.html">The Cook tree →</a></p>
+</footer>
+</body>
+</html>
