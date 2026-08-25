@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<meta name="description" content="The Oglesby family tree — mother's line of the Arkansas Cooks. Laura Elizabeth Oglesby traced back five generations to Sabert Oglesby Sr (~1751), a Scottish immigrant from Annandale, Dumfriesshire who entered through Charleston. Includes the Irish McCain branch (Ballymoney, County Antrim). Scotland → South Carolina → Alabama → Arkansas.">
+<title>The Oglesby Line — Mother of the Arkansas Cooks</title>
+<style>
+  :root{
+    --bg:#ece5d1;--card:#f7f2e3;--card2:#fffdf6;--ink:#242b20;--muted:#6c7360;
+    --line:#c8bd9d;--green:#5b4b7a;--green2:#6e5d90;--gold:#a97f27;--gold-soft:#e8dab4;
+    --hero:#3f3357;--hero-ink:#f2ecd8;--shadow:0 2px 10px rgba(50,45,20,.14);
+  }
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+    --bg:#100e16;--card:#1a1722;--card2:#201c2a;--ink:#e8e3d6;--muted:#9d97ab;
+    --line:#3a3348;--green:#b3a0d4;--green2:#c3b3df;--gold:#d7b25e;--gold-soft:#2e2637;
+    --hero:#241d33;--hero-ink:#efe9dc;--shadow:0 2px 12px rgba(0,0,0,.5);}}
+  :root[data-theme="dark"]{
+    --bg:#100e16;--card:#1a1722;--card2:#201c2a;--ink:#e8e3d6;--muted:#9d97ab;
+    --line:#3a3348;--green:#b3a0d4;--green2:#c3b3df;--gold:#d7b25e;--gold-soft:#2e2637;
+    --hero:#241d33;--hero-ink:#efe9dc;--shadow:0 2px 12px rgba(0,0,0,.5);}
+  *{box-sizing:border-box}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;line-height:1.5}
+  .lab{font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;text-transform:uppercase;
+    letter-spacing:.22em;font-size:.66rem;font-weight:600}
+  header{background:linear-gradient(180deg,var(--hero),color-mix(in srgb,var(--hero) 80%,#000));
+    color:var(--hero-ink);text-align:center;padding:52px 22px 44px;border-bottom:3px solid var(--gold)}
+  header .lab{color:var(--gold)}
+  header h1{font-family:"Hoefler Text",Baskerville,Georgia,serif;font-size:clamp(2.2rem,6vw,3.4rem);
+    margin:.2em 0 .1em;line-height:1.04}
+  header p{margin:0;font-style:italic;opacity:.94;max-width:580px;margin:0 auto}
+  .hint{display:inline-block;margin-top:18px;font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;
+    font-size:.76rem;letter-spacing:.03em;color:var(--gold);border:1px solid rgba(217,192,120,.4);
+    border-radius:20px;padding:6px 14px}
+  .wrap{max-width:840px;margin:0 auto;padding:30px 20px 60px}
+  .bandlab{text-align:center;color:var(--gold);margin:34px 0 12px}
+  .intro{max-width:600px;margin:0 auto 6px;text-align:center;color:var(--muted);font-style:italic}
+  .spine{display:flex;flex-direction:column;align-items:center;gap:0}
+  .link{width:2px;height:20px;background:var(--line)}
+  .person{background:var(--card);border:1px solid var(--line);border-radius:13px;width:100%;
+    max-width:460px;box-shadow:var(--shadow);outline:none;transition:border-color .2s,box-shadow .2s}
+  .person:hover,.person:focus,.person:focus-within{border-color:var(--gold);box-shadow:0 4px 18px rgba(50,45,20,.2)}
+  .person:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .person.direct{border-left:4px solid var(--gold)}
+  .phead{padding:12px 18px;display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+  .phead .nm{font-family:"Hoefler Text",Baskerville,Georgia,serif;font-weight:700;font-size:1.1rem}
+  .phead .yr{font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;font-size:.82rem;color:var(--muted);
+    white-space:nowrap;font-variant-numeric:tabular-nums}
+  .more{max-height:0;opacity:0;overflow:hidden;transition:max-height .34s ease,opacity .3s ease}
+  .person:hover .more,.person:focus .more,.person:focus-within .more{max-height:400px;opacity:1}
+  .more-in{padding:0 18px 15px;border-top:1px solid var(--line);margin-top:2px}
+  .more-in dl{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;margin:11px 0 0;font-size:.92rem}
+  .more-in dt{color:var(--gold);font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;font-size:.72rem;
+    text-transform:uppercase;letter-spacing:.08em;padding-top:3px}
+  .more-in dd{margin:0}
+  .more-in .story{margin:10px 0 0;font-style:italic;color:var(--muted);font-size:.92rem}
+  .opencue{font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;font-size:.64rem;color:var(--gold);
+    letter-spacing:.06em;opacity:.7}
+  .person:hover .opencue,.person:focus-within .opencue{opacity:0}
+  .bridge{max-width:460px;width:100%;margin:4px auto 0;background:var(--gold-soft);
+    border:1px dashed var(--gold);border-radius:13px;padding:14px 18px;text-align:center}
+  .bridge .t{font-family:"Hoefler Text",Baskerville,Georgia,serif;font-weight:700}
+  .bridge p{margin:5px 0 0;color:var(--muted);font-size:.9rem}
+  .bridge a{display:inline-block;margin-top:10px;background:var(--green);color:#fff;text-decoration:none;
+    font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;font-size:.8rem;font-weight:600;
+    padding:9px 18px;border-radius:8px}
+  .chips{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;max-width:780px;margin:2px auto 0}
+  .chip{background:var(--card);border:1px solid var(--line);border-radius:11px;box-shadow:var(--shadow);
+    width:232px;outline:none;transition:border-color .2s}
+  .chip:hover,.chip:focus,.chip:focus-within{border-color:var(--gold)}
+  .chip .chead{padding:8px 12px}
+  .chip .cn{font-family:"Hoefler Text",Baskerville,Georgia,serif;font-weight:700;font-size:.95rem;line-height:1.15}
+  .chip .cy{font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;font-size:.72rem;color:var(--muted)}
+  .chip .cmore{max-height:0;opacity:0;overflow:hidden;transition:max-height .3s,opacity .25s}
+  .chip:hover .cmore,.chip:focus .cmore,.chip:focus-within .cmore{max-height:220px;opacity:1}
+  .chip .cmore-in{padding:0 12px 11px;border-top:1px solid var(--line);font-size:.84rem;color:var(--muted)}
+  .chip .cmore-in .s{font-style:italic;margin-top:6px;display:block}
+  .journey{max-width:640px;margin:20px auto 0;background:var(--card2);border:1px solid var(--line);
+    border-radius:13px;padding:18px 22px;box-shadow:var(--shadow)}
+  .journey b{color:var(--green)}
+  .journey .steps{font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;font-size:.86rem;
+    letter-spacing:.02em;margin:8px 0 0;color:var(--muted)}
+  footer{background:var(--hero);color:var(--hero-ink);text-align:center;padding:34px 22px;border-top:3px solid var(--gold)}
+  footer .lab{color:var(--gold)}
+  footer a{color:var(--gold);text-decoration:none;font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;
+    font-size:.82rem;letter-spacing:.04em}
+</style>
+</head>
+<body>
+<header>
+  <div class="lab">The Oglesby Line · Scotland · Carolina · Alabama · Arkansas</div>
+  <h1>The Oglesby Family Tree</h1>
+  <p>The mother's side of the nine Arkansas Cooks — from a Scottish borderland in the 1750s, and a family that also carries an Irish branch, down to Laura who married into the Cooks.</p>
+  <div class="hint">✦ Hover any name to open their story — tap on a phone</div>
+</header>
+
+<div class="wrap">
+
+  <div class="bandlab lab">The Direct Line — five generations</div>
+  <p class="intro">Oldest at the top. Laura Elizabeth Oglesby married Benjamin Franklin Cook — their nine children are the Arkansas Cooks, and their son Lewis was Topher's grandfather. Vitals checked on FamilySearch (Aug 2026).</p>
+  <div class="spine">
+
+    <div class="person direct" tabindex="0"><div class="phead"><span class="nm">Sabert Oglesby Sr.</span><span class="yr">~1751 – 1831 <span class="opencue">▾</span></span></div>
+      <div class="more"><div class="more-in"><dl><dt>Born</dt><dd>about 1751, Annandale District, Dumfriesshire, Scotland</dd><dt>Came over</dt><dd>by family tradition, from Scotland with two brothers, entering through the Port of Charleston, South Carolina</dd><dt>Lived</dt><dd>documented in Newberry District, S.C. from 1790 (named in the 1790 Blalock will) → Bibb &amp; Tuscaloosa Co., Alabama by 1830</dd><dt>Died</dt><dd>19 April 1831, Tuscaloosa, Alabama</dd><dt>Married</dt><dd>Phebe Lindsey (1774–1855), ~1797; eleven children</dd></dl><p class="story">The immigrant — a Lowland Scot from the border country. His Scottish origin is well-supported family tradition (his son's family Bible); his own parents aren't yet identified, so the line rests at him. Original spelling of the name: <strong>Oglesberry</strong>.</p></div></div></div>
+    <div class="link"></div>
+
+    <div class="person direct" tabindex="0"><div class="phead"><span class="nm">James Oglesby</span><span class="yr">1806 – 1849 <span class="opencue">▾</span></span></div>
+      <div class="more"><div class="more-in"><dl><dt>Name</dt><dd>recorded <em>James Oglesberry</em> — the old spelling, softening to Oglesby in his lifetime</dd><dt>Born</dt><dd>1806, North Carolina</dd><dt>Married</dt><dd>Emily Mila Lindsey (1814–1880), 17 Jan 1830, Tuscaloosa, Alabama</dd><dt>Died</dt><dd>1849, Pulaski County, Arkansas</dd></dl><p class="story">He carried the family from the Carolinas into Alabama, and on toward Arkansas.</p></div></div></div>
+    <div class="link"></div>
+
+    <div class="person direct" tabindex="0"><div class="phead"><span class="nm">Lewis Green Oglesby</span><span class="yr">~1835 – 1891 <span class="opencue">▾</span></span></div>
+      <div class="more"><div class="more-in"><dl><dt>Born</dt><dd>about 1835, Alabama</dd><dt>Married</dt><dd>Elizabeth Bernetta McCain (1842–1888), 30 June 1859, Pulaski County, Arkansas</dd><dt>Died</dt><dd>1891, Lafayette Township, Scott County, Arkansas</dd></dl><p class="story">He settled the family in Arkansas for good — and through his wife, the <strong>Irish McCain line</strong> joins the tree (see below).</p></div></div></div>
+    <div class="link"></div>
+
+    <div class="person direct" tabindex="0"><div class="phead"><span class="nm">John Robert Oglesby</span><span class="yr">1867 – 1945 <span class="opencue">▾</span></span></div>
+      <div class="more"><div class="more-in"><dl><dt>Born</dt><dd>1867, Texas</dd><dt>Married</dt><dd>Minnie Bell Savage (1877–1948), ~1895, Polk County, Arkansas; ten children</dd><dt>Died</dt><dd>18 December 1945, Wickes, Arkansas; buried Daniel Cemetery</dd></dl><p class="story">An Arkansas farmer in Ozark Township, Polk County — the same country the Cooks had settled.</p></div></div></div>
+    <div class="link"></div>
+
+    <div class="person direct" tabindex="0"><div class="phead"><span class="nm">Laura Elizabeth Oglesby</span><span class="yr">1896 – 1939 <span class="opencue">▾</span></span></div>
+      <div class="more"><div class="more-in"><dl><dt>Born</dt><dd>25 October 1896, Indian Township, Payne County, Oklahoma — in the old Indian Territory</dd><dt>Married</dt><dd>Benjamin Franklin Cook, 16 December 1914, Wickes, Arkansas</dd><dt>Children</dt><dd>Nine — the Arkansas Cooks</dd><dt>Died</dt><dd>26 March 1939, Wickes; buried Crystal Hill Cemetery</dd></dl><p class="story">The mother of the nine. Through her, the Oglesby, Scottish and Irish blood all flow into the Cook family.</p></div></div></div>
+  </div>
+
+  <div class="bridge">
+    <div class="t">…and here the Oglesby line joins the Cooks.</div>
+    <p>Laura married <strong>Benjamin Franklin Cook</strong> in 1914. Their son Lewis Elvoy Cook was Topher's grandfather.</p>
+    <a href="family-tree.html">See the Cook tree from here →</a>
+  </div>
+
+  <div class="journey" style="max-width:520px;border-style:dashed;border-color:var(--gold);background:var(--gold-soft);margin:20px auto 0">
+    <div class="lab" style="color:var(--gold)">The Irish branch — through the McCains</div>
+    <p style="margin:8px 0 0">Lewis Green's wife, <b>Elizabeth Bernetta McCain</b>, opens a whole second overseas line: → <b>Hance McCain Jr.</b> (1797 Guilford Co., N.C.; died at Hot&nbsp;Springs, Arkansas, 1847) → <b>&ldquo;Senator&rdquo; Hance Hamilton McCain</b> (1763 Virginia, buried at Buffalo Presbyterian Church, N.C.) → <b>Lt. William McKean</b>, born <b>1704 in Ballymoney, County Antrim, Ireland</b>, who sailed to Pennsylvania in 1722.</p>
+    <p class="steps">A Scots-Irish (Ulster) line — the name spelled both <b>McKean</b> and <b>McCain</b>. William the immigrant is well-documented; the generations <em>above</em> him are disputed among McKean researchers, so we stop at Ballymoney. (Family lore even ties to Thomas McKean, a signer of the Declaration — but that exact link isn't proven.)</p>
+  </div>
+
+  <div class="journey">
+    <div class="lab" style="color:var(--gold)">The Journey</div>
+    <p style="margin:8px 0 0"><b>Scotland</b> (Annandale, Dumfriesshire) → through the port of <b>Charleston</b> to <b>Newberry District, South Carolina</b> (1790s) → <b>Tuscaloosa, Alabama</b> (1830s) → <b>North Carolina / Texas</b> → <b>Arkansas</b> (Pulaski → Scott → Polk) → Laura born in <b>Indian Territory, Oklahoma</b>.</p>
+    <p class="steps">Five generations, ~1751 to today — with an Irish branch reaching back to 1704, and the Savage line (below) coming down instead from the North, out of Illinois.</p>
+  </div>
+
+  <div class="bandlab lab">The Families Who Married In</div>
+  <p class="intro">Each wife on this line opens a branch of her own.</p>
+  <div class="chips">
+    <div class="chip" tabindex="0"><div class="chead"><div class="cn">Phebe Lindsey</div><div class="cy">1774–1855 · South Carolina</div></div><div class="cmore"><div class="cmore-in">m. Sabert Oglesby Sr., ~1797.<span class="s">The Lindsey line — the family the Oglesbys married into twice.</span></div></div></div>
+    <div class="chip" tabindex="0"><div class="chead"><div class="cn">Emily Mila Lindsey</div><div class="cy">1814–1880</div></div><div class="cmore"><div class="cmore-in">m. James Oglesby, 1830, Tuscaloosa, Alabama.<span class="s">A Lindsey again — likely kin to Phebe.</span></div></div></div>
+    <div class="chip" tabindex="0"><div class="chead"><div class="cn">Elizabeth Bernetta McCain</div><div class="cy">1842–1888</div></div><div class="cmore"><div class="cmore-in">m. Lewis Green Oglesby, 1859, Pulaski Co., AR.<span class="s">The Irish McCain / McKean line — Ballymoney, County Antrim.</span></div></div></div>
+    <div class="chip" tabindex="0"><div class="chead"><div class="cn">Minnie Bell Savage</div><div class="cy">1877–1948</div></div><div class="cmore"><div class="cmore-in">m. John Robert Oglesby, ~1895. Laura's mother.<span class="s">The Savage line — down from Piatt County, <b>Illinois</b>, by way of Kansas.</span></div></div></div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="lab">The Oglesby Line · mother's people of the Arkansas Cooks</div>
+  <p style="max-width:580px;margin:12px auto 0;font-style:italic;opacity:.9">Five generations, from the Scottish borders to the Arkansas hills — with Irish and Northern branches marrying in. Vitals checked on FamilySearch (Aug 2026); the Scottish and Irish origins are well-supported family tradition, not yet proven from primary records.</p>
+  <p style="margin:18px 0 0"><a href="index.html">← The full family history</a> &nbsp;·&nbsp; <a href="family-tree.html">The Cook tree →</a> &nbsp;·&nbsp; <a href="brock-tree.html">The Brock tree →</a></p>
+</footer>
+</body>
+</html>

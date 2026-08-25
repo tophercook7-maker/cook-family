@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<meta name="description" content="The Hicks family tree — Topher's great-grandmother Lorena Frances Hicks traced back four generations to Alfred Hicks (1814, North Carolina). North Carolina → north Georgia (Resaca, Habersham) → Polk County, Arkansas. Includes the Abercrombie branch.">
+<title>The Hicks Line — Topher's Great-Grandmother's People</title>
+<style>
+  :root{
+    --bg:#ece5d1;--card:#f7f2e3;--card2:#fffdf6;--ink:#242b20;--muted:#6c7360;
+    --line:#c8bd9d;--green:#8a4b34;--green2:#a05c42;--gold:#a97f27;--gold-soft:#e8dab4;
+    --hero:#5c3423;--hero-ink:#f2ecd8;--shadow:0 2px 10px rgba(50,45,20,.14);
+  }
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+    --bg:#140f0c;--card:#201812;--card2:#271d16;--ink:#e9e2d6;--muted:#a3968a;
+    --line:#41332a;--green:#d99a7e;--green2:#e2ad93;--gold:#d7b25e;--gold-soft:#332619;
+    --hero:#2c1a12;--hero-ink:#eee6da;--shadow:0 2px 12px rgba(0,0,0,.5);}}
+  :root[data-theme="dark"]{
+    --bg:#140f0c;--card:#201812;--card2:#271d16;--ink:#e9e2d6;--muted:#a3968a;
+    --line:#41332a;--green:#d99a7e;--green2:#e2ad93;--gold:#d7b25e;--gold-soft:#332619;
+    --hero:#2c1a12;--hero-ink:#eee6da;--shadow:0 2px 12px rgba(0,0,0,.5);}
+  *{box-sizing:border-box}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;line-height:1.5}
+  .lab{font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;text-transform:uppercase;
+    letter-spacing:.22em;font-size:.66rem;font-weight:600}
+  header{background:linear-gradient(180deg,var(--hero),color-mix(in srgb,var(--hero) 80%,#000));
+    color:var(--hero-ink);text-align:center;padding:52px 22px 44px;border-bottom:3px solid var(--gold)}
+  header .lab{color:var(--gold)}
+  header h1{font-family:"Hoefler Text",Baskerville,Georgia,serif;font-size:clamp(2.2rem,6vw,3.4rem);
+    margin:.2em 0 .1em;line-height:1.04}
+  header p{margin:0;font-style:italic;opacity:.94;max-width:580px;margin:0 auto}
+  .hint{display:inline-block;margin-top:18px;font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;
+    font-size:.76rem;letter-spacing:.03em;color:var(--gold);border:1px solid rgba(217,192,120,.4);
+    border-radius:20px;padding:6px 14px}
+  .wrap{max-width:840px;margin:0 auto;padding:30px 20px 60px}
+  .bandlab{text-align:center;color:var(--gold);margin:34px 0 12px}
+  .intro{max-width:600px;margin:0 auto 6px;text-align:center;color:var(--muted);font-style:italic}
+  .spine{display:flex;flex-direction:column;align-items:center;gap:0}
+  .link{width:2px;height:20px;background:var(--line)}
+  .person{background:var(--card);border:1px solid var(--line);border-radius:13px;width:100%;
+    max-width:460px;box-shadow:var(--shadow);outline:none;transition:border-color .2s,box-shadow .2s}
+  .person:hover,.person:focus,.person:focus-within{border-color:var(--gold);box-shadow:0 4px 18px rgba(50,45,20,.2)}
+  .person:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .person.direct{border-left:4px solid var(--gold)}
+  .phead{padding:12px 18px;display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+  .phead .nm{font-family:"Hoefler Text",Baskerville,Georgia,serif;font-weight:700;font-size:1.1rem}
+  .phead .yr{font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;font-size:.82rem;color:var(--muted);
+    white-space:nowrap;font-variant-numeric:tabular-nums}
+  .more{max-height:0;opacity:0;overflow:hidden;transition:max-height .34s ease,opacity .3s ease}
+  .person:hover .more,.person:focus .more,.person:focus-within .more{max-height:400px;opacity:1}
+  .more-in{padding:0 18px 15px;border-top:1px solid var(--line);margin-top:2px}
+  .more-in dl{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;margin:11px 0 0;font-size:.92rem}
+  .more-in dt{color:var(--gold);font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;font-size:.72rem;
+    text-transform:uppercase;letter-spacing:.08em;padding-top:3px}
+  .more-in dd{margin:0}
+  .more-in .story{margin:10px 0 0;font-style:italic;color:var(--muted);font-size:.92rem}
+  .opencue{font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;font-size:.64rem;color:var(--gold);
+    letter-spacing:.06em;opacity:.7}
+  .person:hover .opencue,.person:focus-within .opencue{opacity:0}
+  .bridge{max-width:460px;width:100%;margin:4px auto 0;background:var(--gold-soft);
+    border:1px dashed var(--gold);border-radius:13px;padding:14px 18px;text-align:center}
+  .bridge .t{font-family:"Hoefler Text",Baskerville,Georgia,serif;font-weight:700}
+  .bridge p{margin:5px 0 0;color:var(--muted);font-size:.9rem}
+  .bridge a{display:inline-block;margin-top:10px;background:var(--green);color:#fff;text-decoration:none;
+    font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;font-size:.8rem;font-weight:600;
+    padding:9px 18px;border-radius:8px}
+  .chips{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;max-width:780px;margin:2px auto 0}
+  .chip{background:var(--card);border:1px solid var(--line);border-radius:11px;box-shadow:var(--shadow);
+    width:232px;outline:none;transition:border-color .2s}
+  .chip:hover,.chip:focus,.chip:focus-within{border-color:var(--gold)}
+  .chip .chead{padding:8px 12px}
+  .chip .cn{font-family:"Hoefler Text",Baskerville,Georgia,serif;font-weight:700;font-size:.95rem;line-height:1.15}
+  .chip .cy{font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;font-size:.72rem;color:var(--muted)}
+  .chip .cmore{max-height:0;opacity:0;overflow:hidden;transition:max-height .3s,opacity .25s}
+  .chip:hover .cmore,.chip:focus .cmore,.chip:focus-within .cmore{max-height:220px;opacity:1}
+  .chip .cmore-in{padding:0 12px 11px;border-top:1px solid var(--line);font-size:.84rem;color:var(--muted)}
+  .chip .cmore-in .s{font-style:italic;margin-top:6px;display:block}
+  .journey{max-width:640px;margin:20px auto 0;background:var(--card2);border:1px solid var(--line);
+    border-radius:13px;padding:18px 22px;box-shadow:var(--shadow)}
+  .journey b{color:var(--green)}
+  .journey .steps{font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;font-size:.86rem;
+    letter-spacing:.02em;margin:8px 0 0;color:var(--muted)}
+  footer{background:var(--hero);color:var(--hero-ink);text-align:center;padding:34px 22px;border-top:3px solid var(--gold)}
+  footer .lab{color:var(--gold)}
+  footer a{color:var(--gold);text-decoration:none;font-family:"Avenir Next","Gill Sans",system-ui,sans-serif;
+    font-size:.82rem;letter-spacing:.04em}
+</style>
+</head>
+<body>
+<header>
+  <div class="lab">The Hicks Line · Carolina · Georgia · Arkansas</div>
+  <h1>The Hicks Family Tree</h1>
+  <p>Topher's great-grandmother Lorena's people — from the Carolina backcountry, through the north-Georgia hills, to the Arkansas Cooks and Brocks.</p>
+  <div class="hint">✦ Hover any name to open their story — tap on a phone</div>
+</header>
+
+<div class="wrap">
+
+  <div class="bandlab lab">The Direct Line — four generations</div>
+  <p class="intro">Oldest at the top. Lorena Frances Hicks married Thomas Benton Brock — their daughter Elizabeth was Topher's grandmother. Vitals checked on FamilySearch (Aug 2026).</p>
+  <div class="spine">
+
+    <div class="person direct" tabindex="0"><div class="phead"><span class="nm">Alfred Hicks</span><span class="yr">1814 – 1892 <span class="opencue">▾</span></span></div>
+      <div class="more"><div class="more-in"><dl><dt>Born</dt><dd>15 June 1814, North Carolina</dd><dt>Married</dt><dd>Harriet Dover (1815–1905), 2 Sep 1832, Demorest, Habersham County, Georgia — the same north-Georgia county the Brocks passed through</dd><dt>Died</dt><dd>25 March 1892, Comanche, Texas</dd><dt>Children</dt><dd>Nine</dd></dl><p class="story">The oldest Hicks we can stand on firmly. Born in Carolina, he farmed across the north-Georgia counties before his own old age took him west to Texas.</p></div></div></div>
+    <div class="link"></div>
+
+    <div class="person direct" tabindex="0"><div class="phead"><span class="nm">Jackson Marion Hicks Sr.</span><span class="yr">1841 – 1868 <span class="opencue">▾</span></span></div>
+      <div class="more"><div class="more-in"><dl><dt>Born</dt><dd>6 November 1841, Cherokee County, Georgia</dd><dt>Served</dt><dd>Confederate Army — Co. D, 60th Georgia Infantry, 1861–65 <em>(family record, not yet documented)</em></dd><dt>Married</dt><dd>Elizabeth Caroline Hopper (1841–1891), 1865, Resaca, Georgia</dd><dt>Died</dt><dd>15 July 1868, Gordon County, Georgia — the year his son was born</dd></dl><p class="story">A Georgia soldier of the Civil War who came home, married, and died young at twenty-six — the same year his son and namesake was born. Another soldier's grave on this family's long roll.</p></div></div></div>
+    <div class="link"></div>
+
+    <div class="person direct" tabindex="0"><div class="phead"><span class="nm">Jackson Marion Hicks Jr.</span><span class="yr">1868 – 1956 <span class="opencue">▾</span></span></div>
+      <div class="more"><div class="more-in"><dl><dt>Born</dt><dd>26 March 1868, Resaca, Georgia</dd><dt>Married</dt><dd>Susan Rhodena Abercrombie (1873–1956), 29 Dec 1889, Polk County, Arkansas; eleven children</dd><dt>Died</dt><dd>21 January 1956, Mena, Arkansas; buried Pleasant Grove Cemetery, Cove</dd></dl><p class="story">The generation that carried the Hicks name out of Georgia and into Polk County, Arkansas — into Cook and Brock country.</p></div></div></div>
+    <div class="link"></div>
+
+    <div class="person direct" tabindex="0"><div class="phead"><span class="nm">Lorena Frances Hicks</span><span class="yr">1901 – 1981 <span class="opencue">▾</span></span></div>
+      <div class="more"><div class="more-in"><dl><dt>Born</dt><dd>16 March 1901, Arkansas</dd><dt>Married</dt><dd>Thomas Benton Brock, 18 December 1919, Polk County, Arkansas</dd><dt>Children</dt><dd>Eight daughters — Elizabeth Susan Brock among them</dd><dt>Died</dt><dd>7 March 1981, Cove, Arkansas; buried Pleasant Grove Cemetery</dd></dl><p class="story">Topher's great-grandmother. She and Thomas Benton Brock raised eight daughters — and one of them, Elizabeth, became Topher's grandmother.</p></div></div></div>
+  </div>
+
+  <div class="bridge">
+    <div class="t">…and here the Hicks line joins the Brocks.</div>
+    <p>Lorena married <strong>Thomas Benton Brock</strong> in 1919. Their daughter Elizabeth married into the Cooks.</p>
+    <a href="brock-tree.html">See the Brock tree from here →</a>
+  </div>
+
+  <div class="journey" style="max-width:520px;border-style:dashed;border-color:var(--gold);background:var(--gold-soft);margin:20px auto 0">
+    <div class="lab" style="color:var(--gold)">The wall — one generation back</div>
+    <p style="margin:8px 0 0">Alfred's attached parents in the shared tree — <b>Elijah Hicks</b> (1790, North Carolina) and <b>Elizabeth Farmer</b> — <b>don't add up</b>: the record has the mother born in 1800 (she'd have been 14 at Alfred's birth) and the couple marrying in 1822, <em>after</em> Alfred was already born.</p>
+    <p class="steps">So that link is broken — Alfred (1814, North Carolina) is the honest edge of the Hicks line until better records turn up.</p>
+  </div>
+
+  <div class="journey">
+    <div class="lab" style="color:var(--gold)">The Journey</div>
+    <p style="margin:8px 0 0"><b>North Carolina</b> (Person County, late 1700s) → the <b>north-Georgia hills</b> (Habersham, Cherokee, Gordon — Resaca and Demorest, early-mid 1800s) → <b>Arkansas</b> (Polk County, by the 1870s–80s).</p>
+    <p class="steps">Four generations to Alfred (1814). The same north-Georgia country the Brocks crossed — two families who would meet, generations later, in the Arkansas hills.</p>
+  </div>
+
+  <div class="bandlab lab">The Families Who Married In</div>
+  <p class="intro">Each wife on this line opens a branch of her own.</p>
+  <div class="chips">
+    <div class="chip" tabindex="0"><div class="chead"><div class="cn">Harriet Dover</div><div class="cy">1815–1905</div></div><div class="cmore"><div class="cmore-in">m. Alfred Hicks, 1832, Habersham Co., Georgia.<span class="s">The Dover line.</span></div></div></div>
+    <div class="chip" tabindex="0"><div class="chead"><div class="cn">Elizabeth Caroline Hopper</div><div class="cy">1841–1891</div></div><div class="cmore"><div class="cmore-in">m. Jackson M. Hicks Sr., 1865, Resaca, Georgia.<span class="s">The Hopper line.</span></div></div></div>
+    <div class="chip" tabindex="0"><div class="chead"><div class="cn">Susan Rhodena Abercrombie</div><div class="cy">1873–1956</div></div><div class="cmore"><div class="cmore-in">m. Jackson M. Hicks Jr., 1889, Polk Co., AR. Born in Davidson Co., Tennessee.<span class="s">The Abercrombie line — a north-Georgia mountain family (Dawson &amp; Fannin counties) back to James Columbus Abercrombie, b. 1819.</span></div></div></div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="lab">The Hicks Line · Topher's great-grandmother, Lorena Frances Hicks (1901–1981)</div>
+  <p style="max-width:580px;margin:12px auto 0;font-style:italic;opacity:.9">Four generations, from the Carolina backcountry to the Arkansas hills. Vitals checked on FamilySearch (Aug 2026); the military service is family record, and the generation above Alfred is broken in the shared tree.</p>
+  <p style="margin:18px 0 0"><a href="index.html">← The full family history</a> &nbsp;·&nbsp; <a href="brock-tree.html">The Brock tree →</a> &nbsp;·&nbsp; <a href="family-tree.html">The Cook tree →</a></p>
+</footer>
+</body>
+</html>
